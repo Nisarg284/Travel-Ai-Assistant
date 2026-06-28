@@ -37,7 +37,7 @@ It retrieves real destination knowledge via a RAG pipeline and produces a struct
 
 | Layer | Technology | Purpose |
 |---|---|---|
-| Language | Java 17+ | Core application language |
+| Language | Java 25 | Core application language |
 | Framework | Spring Boot | DI, REST, service layer |
 | AI Orchestration | LangChain4j | LLM calls, RAG pipeline, agents |
 | LLM | Claude / OpenAI | Feasibility check + itinerary planning |
@@ -99,7 +99,7 @@ Each request flows through three sequential stages:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/travel-assistant-ai.git
+git clone https://github.com/Nisarg284/Travel-Ai-Assistant.git
 cd travel-assistant-ai
 
 # 2. Add your API key to src/main/resources/application.properties
