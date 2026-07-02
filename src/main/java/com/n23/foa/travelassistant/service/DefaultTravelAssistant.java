@@ -24,20 +24,19 @@ implements TravelAssistant {
     }
 
     @Override
-    public String chat(String question) {
-
-//        conversationMemory.add("default",UserMessage.from(question));
+    public String chat(String sessionId,String question) {
 
         TravelRequestType requestType = classifier.classify(question);
+
+        System.out.println("Request Type: "+requestType);
 
         String response;
 
         if (requestType == TravelRequestType.ITINERARY){
-            response = plannerAgent.plan(question);
+            response = plannerAgent.plan(sessionId,question);
         }else{
-            response = knowledgeAgent.chat(question);
+            response = knowledgeAgent.chat(sessionId,question);
         }
-
 
         return response;
     }

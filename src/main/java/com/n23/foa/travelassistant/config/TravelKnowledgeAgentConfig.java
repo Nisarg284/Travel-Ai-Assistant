@@ -2,6 +2,7 @@ package com.n23.foa.travelassistant.config;
 
 
 import com.n23.foa.travelassistant.agents.TravelKnowledgeAgent;
+import dev.langchain4j.memory.chat.ChatMemoryProvider;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.rag.RetrievalAugmentor;
@@ -16,12 +17,13 @@ public class TravelKnowledgeAgentConfig {
     @Bean
     public TravelKnowledgeAgent travelKnowledgeAgent(
             ChatModel chatModel,
-            RetrievalAugmentor retrievalAugmentor
+            RetrievalAugmentor retrievalAugmentor,
+            ChatMemoryProvider store
             )
     {
         return AiServices.builder(TravelKnowledgeAgent.class)
                 .chatModel(chatModel)
-                .chatMemory(MessageWindowChatMemory.withMaxMessages(20))
+                .chatMemoryProvider(store)
                 .retrievalAugmentor(retrievalAugmentor)
                 .build();
     }

@@ -17,7 +17,7 @@ public interface TripConstraintsExtractor {
             Rules:
             - Budget should be numeric only.
             - Convert values like 35k to 35000.
-            - If information is missing, return null.
+            // - If information is missing, return null.
 
             Question:
             {{question}}

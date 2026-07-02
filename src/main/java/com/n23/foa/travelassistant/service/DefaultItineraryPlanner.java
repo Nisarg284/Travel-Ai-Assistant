@@ -3,11 +3,16 @@ package com.n23.foa.travelassistant.service;
 import com.n23.foa.travelassistant.agents.ItineraryPlanner;
 import com.n23.foa.travelassistant.dto.TripConstraints;
 import com.n23.foa.travelassistant.dto.ValidationResult;
+import com.n23.foa.travelassistant.memory.InMemoryChatMemoryStore;
+import dev.langchain4j.data.message.AiMessage;
+import dev.langchain4j.data.message.ChatMessage;
+import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.rag.content.Content;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,13 +21,16 @@ public class DefaultItineraryPlanner
 implements ItineraryPlanner {
 
     private final ChatModel chatModel;
+    private final InMemoryChatMemoryStore memoryStore;
 
-    public DefaultItineraryPlanner(ChatModel chatModel) {
+    public DefaultItineraryPlanner(ChatModel chatModel, InMemoryChatMemoryStore inMemoryChatMemoryStore) {
         this.chatModel = chatModel;
+        this.memoryStore = inMemoryChatMemoryStore;
     }
 
     @Override
     public String plan(
+            String sessionId,
             TripConstraints constraints,
             List<Content> contents,
             ValidationResult validation
@@ -35,16 +43,31 @@ implements ItineraryPlanner {
                 contents
         );
 
+        List<ChatMessage> history = memoryStore.getMessages(sessionId);
+
+        List<ChatMessage> messages = new ArrayList<>(history);
+        messages.add(UserMessage.from(prompt));
+
+        AiMessage response = chatModel.chat(messages).aiMessage();
+
+        messages.add(response);
+        memoryStore.updateMessages(sessionId,messages);
+
+
+
+
         System.out.println(
-                "============= FINAL PROMPT ============="
+//                "============= FINAL PROMPT ============="
+                "=============== memoryStore =============="
         );
-
-        System.out.println(prompt);
-
+//
+//        System.out.println(prompt);
+        System.out.println(memoryStore.getMessages(sessionId));
+//
         System.out.println(
                 "========================================"
         );
-        return chatModel.chat(prompt);
+        return response.text();
     }
 
     private String buildPrompt(TripConstraints constraints, List<Content> contents) {

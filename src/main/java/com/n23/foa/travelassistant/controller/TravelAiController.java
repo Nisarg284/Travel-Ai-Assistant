@@ -19,9 +19,9 @@ public class TravelAiController {
         this.ingestorService = ingestorService;
     }
 
-    @GetMapping("/ask")
-    public String ask(@RequestBody String question){
-        return assistantService.chat(question);
+    @GetMapping("/ask/{sessionId}")
+    public String ask(@PathVariable String sessionId, @RequestBody String question){
+        return assistantService.chat(sessionId, question);
     }
 
     @PostMapping("/ingest")

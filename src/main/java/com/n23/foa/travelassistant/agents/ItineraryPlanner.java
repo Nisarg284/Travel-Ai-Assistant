@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface ItineraryPlanner {
     String plan(
+            String sessionId,
             TripConstraints constraints,
             List<Content> contents,
             ValidationResult validation
