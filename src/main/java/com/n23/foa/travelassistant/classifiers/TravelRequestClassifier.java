@@ -1,4 +1,10 @@
 package com.n23.foa.travelassistant.classifiers;
 
-public class TravelRequestClassifier {
+import com.n23.foa.travelassistant.enums.TravelRequestType;
+
+public interface TravelRequestClassifier {
+
+    TravelRequestType classify(
+            String question
+    );
 }

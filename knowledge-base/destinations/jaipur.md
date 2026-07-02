@@ -1,261 +1,375 @@
-[//]: # (# Jaipur)
+# Jaipur
 
-[//]: # ()
-[//]: # (## Overview)
 
-[//]: # (Jaipur, the capital of Rajasthan, is popularly known as the "Pink City" due to its distinctive pink-colored buildings. Founded in 1727 by Maharaja Sawai Jai Singh II, Jaipur is famous for its rich history, magnificent palaces, vibrant culture, and traditional handicrafts. It forms a part of India's renowned Golden Triangle tourist circuit along with Delhi and Agra.)
+## Overview
 
-[//]: # ()
-[//]: # (## Best Time To Visit)
+Jaipur, the capital of Rajasthan, is popularly known as the "Pink City" due to its distinctive pink-colored buildings. Founded in 1727 by Maharaja Sawai Jai Singh II, Jaipur is famous for its rich history, magnificent palaces, vibrant culture, and traditional handicrafts. It forms a part of India's renowned Golden Triangle tourist circuit along with Delhi and Agra.
 
-[//]: # (The ideal time to visit Jaipur is from October to March when the weather is pleasant and suitable for sightseeing. Summers &#40;April to June&#41; are extremely hot, while the monsoon season &#40;July to September&#41; brings moderate rainfall and fewer crowds.)
 
-[//]: # ()
-[//]: # (## How To Reach)
+## Best Time To Visit
 
-[//]: # (- **By Air:** Jaipur International Airport is well-connected to major Indian cities and some international destinations.)
+The ideal time to visit Jaipur is from October to March when the weather is pleasant and suitable for sightseeing. Summers (April to June) are extremely hot, while the monsoon season (July to September) brings moderate rainfall and fewer crowds.
 
-[//]: # (- **By Train:** Jaipur Junction Railway Station has regular trains from Delhi, Mumbai, Kolkata, Ahmedabad, and other major cities.)
 
-[//]: # (- **By Road:** National highways connect Jaipur with Delhi, Agra, Udaipur, Jodhpur, and neighboring cities. State buses and private cabs are easily available.)
+## How To Reach
 
-[//]: # ()
-[//]: # (## Top Attractions)
+- **By Air:** Jaipur International Airport is well-connected to major Indian cities and some international destinations.
 
-[//]: # (- Amber Fort)
+- **By Train:** Jaipur Junction Railway Station has regular trains from Delhi, Mumbai, Kolkata, Ahmedabad, and other major cities.
 
-[//]: # (- Hawa Mahal &#40;Palace of Winds&#41;)
+- **By Road:** National highways connect Jaipur with Delhi, Agra, Udaipur, Jodhpur, and neighboring cities. State buses and private cabs are easily available.
 
-[//]: # (- City Palace)
 
-[//]: # (- Jantar Mantar &#40;UNESCO World Heritage Site&#41;)
+## Top Attractions
 
-[//]: # (- Nahargarh Fort)
+- Amber Fort
 
-[//]: # (- Jaigarh Fort)
+- Hawa Mahal (Palace of Winds)
 
-[//]: # (- Jal Mahal)
+- City Palace
 
-[//]: # (- Albert Hall Museum)
+- Jantar Mantar (UNESCO World Heritage Site)
 
-[//]: # (- Birla Mandir)
+- Nahargarh Fort
 
-[//]: # (- Chokhi Dhani)
+- Jaigarh Fort
 
-[//]: # ()
-[//]: # (## Accommodation)
+- Jal Mahal
 
-[//]: # (Jaipur offers accommodation options for every budget:)
+- Albert Hall Museum
 
-[//]: # (- **Budget:** Hostels and guest houses starting from ₹500–₹1,500 per night.)
+- Birla Mandir
 
-[//]: # (- **Mid-range:** Hotels and boutique stays ranging from ₹2,000–₹5,000 per night.)
+- Chokhi Dhani
 
-[//]: # (- **Luxury:** Heritage hotels and resorts such as Rambagh Palace and Jai Mahal Palace starting from ₹10,000 per night.)
 
-[//]: # ()
-[//]: # (## Food To Try)
+## Accommodation
 
-[//]: # (- Dal Baati Churma)
+Jaipur offers accommodation options for every budget:
 
-[//]: # (- Ghewar)
+- **Budget:** Hostels and guest houses starting from ₹500–₹1,500 per night.
 
-[//]: # (- Laal Maas)
+- **Mid-range:** Hotels and boutique stays ranging from ₹2,000–₹5,000 per night.
 
-[//]: # (- Pyaaz Kachori)
+- **Luxury:** Heritage hotels and resorts such as Rambagh Palace and Jai Mahal Palace starting from ₹10,000 per night.
 
-[//]: # (- Mirchi Bada)
 
-[//]: # (- Ker Sangri)
+## Food To Try
 
-[//]: # (- Rajasthani Thali)
+- Dal Baati Churma
 
-[//]: # (- Lassi from local sweet shops)
+- Ghewar
 
-[//]: # ()
-[//]: # (## Estimated Budget)
+- Laal Maas
 
-[//]: # (- **Budget Traveler:** ₹1,500–₹2,500 per day)
+- Pyaaz Kachori
 
-[//]: # (- **Mid-range Traveler:** ₹3,000–₹7,000 per day)
+- Mirchi Bada
 
-[//]: # (- **Luxury Traveler:** ₹10,000+ per day)
+- Ker Sangri
 
-[//]: # ()
-[//]: # (## Travel Tips)
+- Rajasthani Thali
 
-[//]: # (- Carry light cotton clothes during summer and warm clothes during winter evenings.)
+- Lassi from local sweet shops
 
-[//]: # (- Start sightseeing early to avoid crowds and heat.)
+## Planning Metadata
+* Minimum Daily Budget: ₹3,000
+* Recommended Daily Budget: ₹5,000
 
-[//]: # (- Bargaining is common in local markets like Johari Bazaar and Bapu Bazaar.)
+## Estimated Budget
 
-[//]: # (- Wear comfortable footwear, as many attractions involve walking.)
+- **Budget Traveler:** ₹1,500–₹2,500 per day
 
-[//]: # (- Keep cash handy for small purchases, though digital payments are widely accepted.)
+- **Mid-range Traveler:** ₹3,000–₹7,000 per day
 
-[//]: # (- Respect local customs and dress modestly while visiting religious sites.)
+- **Luxury Traveler:** ₹10,000+ per day
 
-[//]: # (- Try authentic Rajasthani cuisine from reputed restaurants and local eateries.)
+
+## Travel Tips
+
+- Carry light cotton clothes during summer and warm clothes during winter evenings.
+
+- Start sightseeing early to avoid crowds and heat.
+
+- Bargaining is common in local markets like Johari Bazaar and Bapu Bazaar.
+
+- Wear comfortable footwear, as many attractions involve walking.
+
+- Keep cash handy for small purchases, though digital payments are widely accepted.
+
+- Respect local customs and dress modestly while visiting religious sites.
+
+- Try authentic Rajasthani cuisine from reputed restaurants and local eateries.
 [//]: # (--------------------------------------------------)
 
+[//]: # ()
+[//]: # (#  Jaipur)
 
-#  Jaipur
+[//]: # ()
+[//]: # (##  Overview)
 
-##  Overview
+[//]: # ()
+[//]: # (Jaipur, the capital of Rajasthan, is one of India's most iconic and colourful cities. Founded in 1727 by Maharaja Sawai Jai Singh II, it was India's first planned city and is famously known as the Pink City — named after the terracotta-pink hue of its old city buildings, painted in 1876 to welcome the Prince of Wales.)
 
-Jaipur, the capital of Rajasthan, is one of India's most iconic and colourful cities. Founded in 1727 by Maharaja Sawai Jai Singh II, it was India's first planned city and is famously known as the Pink City — named after the terracotta-pink hue of its old city buildings, painted in 1876 to welcome the Prince of Wales.
+[//]: # ()
+[//]: # (A proud member of the UNESCO World Heritage Cities list &#40;since 2019&#41;, Jaipur is a treasure trove of magnificent forts, ornate palaces, bustling bazaars, and world-class cuisine. It forms the golden corner of India's famous Golden Triangle tourist circuit &#40;Delhi–Agra–Jaipur&#41; and is a gateway to the greater wonders of Rajasthan.)
 
-A proud member of the UNESCO World Heritage Cities list (since 2019), Jaipur is a treasure trove of magnificent forts, ornate palaces, bustling bazaars, and world-class cuisine. It forms the golden corner of India's famous Golden Triangle tourist circuit (Delhi–Agra–Jaipur) and is a gateway to the greater wonders of Rajasthan.
+[//]: # ()
+[//]: # (State: Rajasthan)
 
-State: Rajasthan
-Language: Hindi, Rajasthani, English
-Currency: Indian Rupee (Rs. / INR)
-Time Zone: IST (UTC +5:30)
+[//]: # (Language: Hindi, Rajasthani, English)
 
-##  Best Time to Visit
+[//]: # (Currency: Indian Rupee &#40;Rs. / INR&#41;)
 
-- Season: Peak Season | Months: October – March | Conditions: Cool, dry, ideal (10–25°C); festivals like Diwali & Jaipur Literature Festival
-- Season: Shoulder Season | Months: September & April | Conditions: Warm but manageable; fewer crowds
-- Season: Summer | Months: May – June | Conditions: Very hot (35–45°C); not recommended for outdoor sightseeing
-- Season: Monsoon | Months: July – August | Conditions: Moderate rains, lush surroundings; some outdoor sites less accessible
+[//]: # (Time Zone: IST &#40;UTC +5:30&#41;)
 
-Best time overall: November to February — pleasant weather and vibrant festival atmosphere.
+[//]: # ()
+[//]: # (##  Best Time to Visit)
 
-##  How to Reach
+[//]: # ()
+[//]: # (- Season: Peak Season | Months: October – March | Conditions: Cool, dry, ideal &#40;10–25°C&#41;; festivals like Diwali & Jaipur Literature Festival)
 
-### By Air
-- Jaipur International Airport (JAI) — Sanganer Airport, about 12 km from the city centre.
-- Direct flights from Delhi (~45 min), Mumbai (~1.5 hrs), Bengaluru (~2 hrs), Hyderabad, and Kolkata.
-- International connections via Delhi.
+[//]: # (- Season: Shoulder Season | Months: September & April | Conditions: Warm but manageable; fewer crowds)
 
-### By Train
-- Jaipur Junction — major railway hub with excellent connectivity.
-- Key trains: Pink City Express (Delhi–Jaipur, ~4.5 hrs), Ajmer Shatabdi (Delhi–Jaipur, ~4 hrs), Double Decker Express from Delhi.
-- Well connected to Agra, Mumbai, Jodhpur, Udaipur, and Ahmedabad.
+[//]: # (- Season: Summer | Months: May – June | Conditions: Very hot &#40;35–45°C&#41;; not recommended for outdoor sightseeing)
 
-### By Road
-- From Delhi: ~280 km via NH-48 (Jaipur Highway); ~5–6 hours by car or bus.
-- From Agra: ~240 km; ~4–5 hours.
-- From Udaipur: ~395 km; ~6–7 hours.
-- Excellent state and private bus services (Volvo AC buses widely available from Delhi).
+[//]: # (- Season: Monsoon | Months: July – August | Conditions: Moderate rains, lush surroundings; some outdoor sites less accessible)
 
-##  Top Attractions
+[//]: # ()
+[//]: # (Best time overall: November to February — pleasant weather and vibrant festival atmosphere.)
 
-### Forts & Palaces
+[//]: # ()
+[//]: # (##  How to Reach)
 
-- Amber Fort (Amer Fort): Magnificent hilltop fort; elephant rides, Sheesh Mahal (Mirror Palace)
-- Nahargarh Fort: Panoramic sunset views over the city; hilltop café
-- Jaigarh Fort: Houses the world's largest cannon on wheels (Jaivana)
-- City Palace: Royal museum complex; Mubarak Mahal, Chandra Mahal, armory
-- Hawa Mahal: Iconic 5-storey "Palace of Winds" with 953 windows
-- Rambagh Palace: Converted luxury hotel; tea on the lawn is a must
+[//]: # ()
+[//]: # (### By Air)
 
-### Temples & Heritage
-- Birla Mandir (Laxmi Narayan Temple) – Gleaming white marble temple at the base of Moti Dungri hill.
-- Galtaji (Monkey Temple) – Ancient pilgrimage site with natural springs; home to hundreds of monkeys.
-- Jantar Mantar – UNESCO World Heritage Site; 18th-century astronomical observatory with massive instruments.
-- Govind Dev Ji Temple – Revered Krishna temple inside the City Palace complex.
+[//]: # (- Jaipur International Airport &#40;JAI&#41; — Sanganer Airport, about 12 km from the city centre.)
 
-### Museums & Art
-- Albert Hall Museum – Rajasthan's oldest museum; Indo-Saracenic architecture and eclectic artifacts.
-- Anokhi Museum of Hand Printing – Dedicated to Rajasthan's block-printing heritage (in Amber).
-- Jaipur Wax Museum – Located inside Nahargarh Fort.
+[//]: # (- Direct flights from Delhi &#40;~45 min&#41;, Mumbai &#40;~1.5 hrs&#41;, Bengaluru &#40;~2 hrs&#41;, Hyderabad, and Kolkata.)
 
-### Markets & Bazaars
-- Johari Bazaar – Jewellery, especially Kundan and Meenakari work.
-- Bapu Bazaar – Textiles, juttis (Rajasthani shoes), and souvenirs.
-- Tripolia Bazaar – Lac bangles, metalware, and traditional crafts.
-- MI Road – Modern shopping; Rajasthali (government emporium) for authentic crafts.
+[//]: # (- International connections via Delhi.)
 
-##  Accommodation
+[//]: # ()
+[//]: # (### By Train)
 
-### Budget (Rs.600 – Rs.1,800/night)
-- Backpacker hostels and guesthouses near the Old City.
-- Recommended: Moustache Hostel Jaipur, Zostel Jaipur, Hotel Pearl Palace.
+[//]: # (- Jaipur Junction — major railway hub with excellent connectivity.)
 
-### Mid-Range (Rs.2,000 – Rs.7,000/night)
-- Heritage havelis and boutique hotels.
-- Recommended: Alsisar Haveli, Samode Haveli, Hotel Diggi Palace, Shahpura House.
+[//]: # (- Key trains: Pink City Express &#40;Delhi–Jaipur, ~4.5 hrs&#41;, Ajmer Shatabdi &#40;Delhi–Jaipur, ~4 hrs&#41;, Double Decker Express from Delhi.)
 
-### Luxury (Rs.8,000 – Rs.50,000+/night)
-- Palace hotels and five-star resorts.
-- Recommended: Rambagh Palace (Taj), Taj Jai Mahal Palace, Fairmont Jaipur, Oberoi Rajvilas.
+[//]: # (- Well connected to Agra, Mumbai, Jodhpur, Udaipur, and Ahmedabad.)
 
-##  Food to Try
+[//]: # ()
+[//]: # (### By Road)
 
-Jaipur's cuisine is rich, hearty, and full of bold Rajasthani flavours — dal, ghee, and spices are at its heart.
+[//]: # (- From Delhi: ~280 km via NH-48 &#40;Jaipur Highway&#41;; ~5–6 hours by car or bus.)
 
-### Must-Try Dishes
+[//]: # (- From Agra: ~240 km; ~4–5 hours.)
 
-- Dal Baati Churma: Baked wheat balls with lentil curry and crushed sweet churma — Rajasthan's signature dish
-- Laal Maas: Fiery red mutton curry cooked with mathania chillies
-- Gatte ki Sabzi: Gram flour dumplings in tangy yoghurt-based curry
-- Ker Sangri: Desert beans and berries stir-fried with spices
-- Pyaaz Kachori: Deep-fried pastry stuffed with spiced onions — a Jaipur street food icon
-- Ghewar: Disc-shaped sweet soaked in sugar syrup; especially popular during Teej
-- Mawa Kachori: Sweet kachori stuffed with thickened milk and dry fruits
-- Masala Chai: Spiced tea served roadside at almost every corner
+[//]: # (- From Udaipur: ~395 km; ~6–7 hours.)
 
-### Where to Eat
-- Laxmi Misthan Bhandar (LMB), Johari Bazaar – Jaipur institution for sweets and Rajasthani thali.
-- Rawat Misthan Bhandar – Best Pyaaz Kachori in the city; a morning ritual for locals.
-- Chokhi Dhani – Rajasthani village-themed resort with traditional folk performances and authentic thali.
-- Suvarna Mahal, Rambagh Palace – Fine dining in a royal setting.
-- Peacock Rooftop Restaurant – Great views of Hawa Mahal with Rajasthani and Indian food.
+[//]: # (- Excellent state and private bus services &#40;Volvo AC buses widely available from Delhi&#41;.)
 
-##  Estimated Budget
+[//]: # ()
+[//]: # (##  Top Attractions)
 
-### Minimum Budget (Backpacker / Budget Traveller)
+[//]: # ()
+[//]: # (### Forts & Palaces)
 
-- Accommodation (hostel/guesthouse): Rs.500 – Rs.900
-- Food (local dhabas and street food): Rs.300 – Rs.500
-- Transport (auto/e-rickshaw): Rs.200 – Rs.350
-- Sightseeing (combined fort ticket ~Rs.500): Rs.300 – Rs.500
-- Miscellaneous: Rs.150 – Rs.250
-- Total: Rs.1,450 – Rs.2,500/day
+[//]: # ()
+[//]: # (- Amber Fort &#40;Amer Fort&#41;: Magnificent hilltop fort; elephant rides, Sheesh Mahal &#40;Mirror Palace&#41;)
 
-### Recommended Budget (Mid-Range Traveller)
+[//]: # (- Nahargarh Fort: Panoramic sunset views over the city; hilltop café)
 
-- Accommodation (heritage hotel/haveli): Rs.2,500 – Rs.5,000
-- Food (restaurants + one special dinner): Rs.800 – Rs.1,500
-- Transport (Ola/Uber/hired car): Rs.500 – Rs.900
-- Sightseeing + guided tours: Rs.800 – Rs.1,500
-- Shopping & extras: Rs.500 – Rs.1,500
-- Total: Rs.5,100 – Rs.10,400/day
+[//]: # (- Jaigarh Fort: Houses the world's largest cannon on wheels &#40;Jaivana&#41;)
 
-### Luxury Budget
+[//]: # (- City Palace: Royal museum complex; Mubarak Mahal, Chandra Mahal, armory)
 
-- Accommodation (palace hotel): Rs.10,000 – Rs.40,000+
-- Food (fine dining, high tea): Rs.2,500 – Rs.5,000
-- Transport (private car + driver): Rs.1,500 – Rs.3,000
-- Activities (elephant rides, cooking class, spa): Rs.2,000 – Rs.5,000
-- Total: Rs.16,000 – Rs.53,000+/day
+[//]: # (- Hawa Mahal: Iconic 5-storey "Palace of Winds" with 953 windows)
 
-##  Travel Tips
+[//]: # (- Rambagh Palace: Converted luxury hotel; tea on the lawn is a must)
 
-1. Start early — Amber Fort, Hawa Mahal, and City Palace get very crowded by mid-morning. Arrive at 8–9 AM to beat the heat and the rush.
+[//]: # ()
+[//]: # (### Temples & Heritage)
 
-2. Buy the composite ticket — A single ticket covers Amber Fort, Nahargarh Fort, Albert Hall, and more. It's great value at around Rs.500 for foreigners and Rs.200 for Indians.
+[//]: # (- Birla Mandir &#40;Laxmi Narayan Temple&#41; – Gleaming white marble temple at the base of Moti Dungri hill.)
 
-3. Bargain at bazaars — Haggling is expected at local markets. Start at 50% of the quoted price and work your way up.
+[//]: # (- Galtaji &#40;Monkey Temple&#41; – Ancient pilgrimage site with natural springs; home to hundreds of monkeys.)
 
-4. Hire a local guide — Especially at Amber Fort and City Palace; they bring the history to life and the cost is minimal (Rs.300–Rs.600 for 2 hours).
+[//]: # (- Jantar Mantar – UNESCO World Heritage Site; 18th-century astronomical observatory with massive instruments.)
 
-5. Watch out for touts — Around popular attractions, unsolicited "guides" and gem/carpet shop representatives are common. Politely decline and stay firm.
+[//]: # (- Govind Dev Ji Temple – Revered Krishna temple inside the City Palace complex.)
 
-6. Try a heritage walk — Several operators offer guided walks through the walled Pink City; a fantastic way to see Jaipur's lanes, architecture, and food on foot.
+[//]: # ()
+[//]: # (### Museums & Art)
 
-7. Dress modestly — When visiting temples and religious sites. Cover shoulders and knees; remove footwear.
+[//]: # (- Albert Hall Museum – Rajasthan's oldest museum; Indo-Saracenic architecture and eclectic artifacts.)
 
-8. Stay hydrated — Jaipur can get very hot and dry. Carry a water bottle and drink nimbu paani (lemon water) or lassi from local vendors.
+[//]: # (- Anokhi Museum of Hand Printing – Dedicated to Rajasthan's block-printing heritage &#40;in Amber&#41;.)
 
-9. Use Ola/Uber — More reliable and fairly priced compared to negotiating auto rates. However, autos are fine for short hops within the old city.
+[//]: # (- Jaipur Wax Museum – Located inside Nahargarh Fort.)
 
-10. Be camera-ready at sunrise — The Amber Fort and Nahargarh Fort look magical in the golden hour light. Nahargarh is a popular sunset spot too.
+[//]: # ()
+[//]: # (### Markets & Bazaars)
 
-11. Shopping tip — Kundan jewellery, blue pottery, block-printed textiles, and leather juttis are Jaipur's most famous buys. Buy from government emporia (Rajasthali) for fixed, fair prices.
+[//]: # (- Johari Bazaar – Jewellery, especially Kundan and Meenakari work.)
 
-12. Day trips worth taking — Abhaneri Step Well (Chand Baori) (95 km), Samode Palace (45 km), and Ranthambore National Park (180 km) make excellent excursions from Jaipur.
+[//]: # (- Bapu Bazaar – Textiles, juttis &#40;Rajasthani shoes&#41;, and souvenirs.)
 
-Jaipur is a city that overwhelms the senses in the best way — colourful, royal, fragrant, and deeply alive. Take it slow and let the Pink City paint your journey.
+[//]: # (- Tripolia Bazaar – Lac bangles, metalware, and traditional crafts.)
+
+[//]: # (- MI Road – Modern shopping; Rajasthali &#40;government emporium&#41; for authentic crafts.)
+
+[//]: # ()
+[//]: # (##  Accommodation)
+
+[//]: # ()
+[//]: # (### Budget &#40;Rs.600 – Rs.1,800/night&#41;)
+
+[//]: # (- Backpacker hostels and guesthouses near the Old City.)
+
+[//]: # (- Recommended: Moustache Hostel Jaipur, Zostel Jaipur, Hotel Pearl Palace.)
+
+[//]: # ()
+[//]: # (### Mid-Range &#40;Rs.2,000 – Rs.7,000/night&#41;)
+
+[//]: # (- Heritage havelis and boutique hotels.)
+
+[//]: # (- Recommended: Alsisar Haveli, Samode Haveli, Hotel Diggi Palace, Shahpura House.)
+
+[//]: # ()
+[//]: # (### Luxury &#40;Rs.8,000 – Rs.50,000+/night&#41;)
+
+[//]: # (- Palace hotels and five-star resorts.)
+
+[//]: # (- Recommended: Rambagh Palace &#40;Taj&#41;, Taj Jai Mahal Palace, Fairmont Jaipur, Oberoi Rajvilas.)
+
+[//]: # ()
+[//]: # (##  Food to Try)
+
+[//]: # ()
+[//]: # (Jaipur's cuisine is rich, hearty, and full of bold Rajasthani flavours — dal, ghee, and spices are at its heart.)
+
+[//]: # ()
+[//]: # (### Must-Try Dishes)
+
+[//]: # ()
+[//]: # (- Dal Baati Churma: Baked wheat balls with lentil curry and crushed sweet churma — Rajasthan's signature dish)
+
+[//]: # (- Laal Maas: Fiery red mutton curry cooked with mathania chillies)
+
+[//]: # (- Gatte ki Sabzi: Gram flour dumplings in tangy yoghurt-based curry)
+
+[//]: # (- Ker Sangri: Desert beans and berries stir-fried with spices)
+
+[//]: # (- Pyaaz Kachori: Deep-fried pastry stuffed with spiced onions — a Jaipur street food icon)
+
+[//]: # (- Ghewar: Disc-shaped sweet soaked in sugar syrup; especially popular during Teej)
+
+[//]: # (- Mawa Kachori: Sweet kachori stuffed with thickened milk and dry fruits)
+
+[//]: # (- Masala Chai: Spiced tea served roadside at almost every corner)
+
+[//]: # ()
+[//]: # (### Where to Eat)
+
+[//]: # (- Laxmi Misthan Bhandar &#40;LMB&#41;, Johari Bazaar – Jaipur institution for sweets and Rajasthani thali.)
+
+[//]: # (- Rawat Misthan Bhandar – Best Pyaaz Kachori in the city; a morning ritual for locals.)
+
+[//]: # (- Chokhi Dhani – Rajasthani village-themed resort with traditional folk performances and authentic thali.)
+
+[//]: # (- Suvarna Mahal, Rambagh Palace – Fine dining in a royal setting.)
+
+[//]: # (- Peacock Rooftop Restaurant – Great views of Hawa Mahal with Rajasthani and Indian food.)
+
+[//]: # ()
+[//]: # (##  Estimated Budget)
+
+[//]: # ()
+[//]: # (### Minimum Budget &#40;Backpacker / Budget Traveller&#41;)
+
+[//]: # ()
+[//]: # (- Accommodation &#40;hostel/guesthouse&#41;: Rs.500 – Rs.900)
+
+[//]: # (- Food &#40;local dhabas and street food&#41;: Rs.300 – Rs.500)
+
+[//]: # (- Transport &#40;auto/e-rickshaw&#41;: Rs.200 – Rs.350)
+
+[//]: # (- Sightseeing &#40;combined fort ticket ~Rs.500&#41;: Rs.300 – Rs.500)
+
+[//]: # (- Miscellaneous: Rs.150 – Rs.250)
+
+[//]: # (- Total: Rs.1,450 – Rs.2,500/day)
+
+[//]: # ()
+[//]: # (### Recommended Budget &#40;Mid-Range Traveller&#41;)
+
+[//]: # ()
+[//]: # (- Accommodation &#40;heritage hotel/haveli&#41;: Rs.2,500 – Rs.5,000)
+
+[//]: # (- Food &#40;restaurants + one special dinner&#41;: Rs.800 – Rs.1,500)
+
+[//]: # (- Transport &#40;Ola/Uber/hired car&#41;: Rs.500 – Rs.900)
+
+[//]: # (- Sightseeing + guided tours: Rs.800 – Rs.1,500)
+
+[//]: # (- Shopping & extras: Rs.500 – Rs.1,500)
+
+[//]: # (- Total: Rs.5,100 – Rs.10,400/day)
+
+[//]: # ()
+[//]: # (### Luxury Budget)
+
+[//]: # ()
+[//]: # (- Accommodation &#40;palace hotel&#41;: Rs.10,000 – Rs.40,000+)
+
+[//]: # (- Food &#40;fine dining, high tea&#41;: Rs.2,500 – Rs.5,000)
+
+[//]: # (- Transport &#40;private car + driver&#41;: Rs.1,500 – Rs.3,000)
+
+[//]: # (- Activities &#40;elephant rides, cooking class, spa&#41;: Rs.2,000 – Rs.5,000)
+
+[//]: # (- Total: Rs.16,000 – Rs.53,000+/day)
+
+[//]: # ()
+[//]: # (##  Travel Tips)
+
+[//]: # ()
+[//]: # (1. Start early — Amber Fort, Hawa Mahal, and City Palace get very crowded by mid-morning. Arrive at 8–9 AM to beat the heat and the rush.)
+
+[//]: # ()
+[//]: # (2. Buy the composite ticket — A single ticket covers Amber Fort, Nahargarh Fort, Albert Hall, and more. It's great value at around Rs.500 for foreigners and Rs.200 for Indians.)
+
+[//]: # ()
+[//]: # (3. Bargain at bazaars — Haggling is expected at local markets. Start at 50% of the quoted price and work your way up.)
+
+[//]: # ()
+[//]: # (4. Hire a local guide — Especially at Amber Fort and City Palace; they bring the history to life and the cost is minimal &#40;Rs.300–Rs.600 for 2 hours&#41;.)
+
+[//]: # ()
+[//]: # (5. Watch out for touts — Around popular attractions, unsolicited "guides" and gem/carpet shop representatives are common. Politely decline and stay firm.)
+
+[//]: # ()
+[//]: # (6. Try a heritage walk — Several operators offer guided walks through the walled Pink City; a fantastic way to see Jaipur's lanes, architecture, and food on foot.)
+
+[//]: # ()
+[//]: # (7. Dress modestly — When visiting temples and religious sites. Cover shoulders and knees; remove footwear.)
+
+[//]: # ()
+[//]: # (8. Stay hydrated — Jaipur can get very hot and dry. Carry a water bottle and drink nimbu paani &#40;lemon water&#41; or lassi from local vendors.)
+
+[//]: # ()
+[//]: # (9. Use Ola/Uber — More reliable and fairly priced compared to negotiating auto rates. However, autos are fine for short hops within the old city.)
+
+[//]: # ()
+[//]: # (10. Be camera-ready at sunrise — The Amber Fort and Nahargarh Fort look magical in the golden hour light. Nahargarh is a popular sunset spot too.)
+
+[//]: # ()
+[//]: # (11. Shopping tip — Kundan jewellery, blue pottery, block-printed textiles, and leather juttis are Jaipur's most famous buys. Buy from government emporia &#40;Rajasthali&#41; for fixed, fair prices.)
+
+[//]: # ()
+[//]: # (12. Day trips worth taking — Abhaneri Step Well &#40;Chand Baori&#41; &#40;95 km&#41;, Samode Palace &#40;45 km&#41;, and Ranthambore National Park &#40;180 km&#41; make excellent excursions from Jaipur.)
+
+[//]: # ()
+[//]: # (Jaipur is a city that overwhelms the senses in the best way — colourful, royal, fragrant, and deeply alive. Take it slow and let the Pink City paint your journey.)

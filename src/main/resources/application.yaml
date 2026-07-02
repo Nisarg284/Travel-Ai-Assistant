@@ -1,3 +1,22 @@
 spring:
   application:
     name: Travel Assistant
+
+
+groq:
+  api-key: ${GROQ_API_KEY}
+  model-name: llama-3.3-70b-versatile
+  base-url: https://api.groq.com/openai/v1
+
+
+qdrant:
+  api-key: ${QDRANT_API_KEY}
+  host-name: ${QDRANT_HOST_NAME}
+  port: ${QDRANT_PORT}
+  collection-name: travel-docs
+
+huggingface:
+  api-key: ${HUGGINGFACE_API_KEY}
+  embedding-model: sentence-transformers/all-MiniLM-L6-v2
+
+

@@ -1,7 +1,7 @@
 package com.n23.foa.travelassistant.config;
 
 
-import com.n23.foa.travelassistant.agents.TravelAssistant;
+import com.n23.foa.travelassistant.agents.TravelKnowledgeAgent;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.rag.RetrievalAugmentor;
@@ -10,16 +10,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class TravelAssistantConfig {
+public class TravelKnowledgeAgentConfig {
 
 
     @Bean
-    public TravelAssistant travelAssistant(
+    public TravelKnowledgeAgent travelKnowledgeAgent(
             ChatModel chatModel,
             RetrievalAugmentor retrievalAugmentor
             )
     {
-        return AiServices.builder(TravelAssistant.class)
+        return AiServices.builder(TravelKnowledgeAgent.class)
                 .chatModel(chatModel)
                 .chatMemory(MessageWindowChatMemory.withMaxMessages(20))
                 .retrievalAugmentor(retrievalAugmentor)
