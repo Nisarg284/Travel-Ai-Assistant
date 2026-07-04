@@ -5,10 +5,12 @@ import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.rag.content.Content;
 import dev.langchain4j.rag.content.injector.ContentInjector;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Slf4j
 @Component
 public class TravelContentInjector
         implements ContentInjector {
@@ -16,17 +18,13 @@ public class TravelContentInjector
     @Override
     public ChatMessage inject(List<Content> contents, ChatMessage chatMessage) {
 
-//        System.out.println("<-----------------------------inside content injector----------------------------->");
-
-
         StringBuilder prompt = new StringBuilder();
 
         String question = "";
 
-        if (chatMessage instanceof UserMessage userMessage){
+        if (chatMessage instanceof UserMessage userMessage) {
             question = userMessage.singleText();
         }
-
 
         prompt.append("""
                 You are an expert travel assistant.
@@ -44,10 +42,9 @@ public class TravelContentInjector
 
                 """);
 
-        for(Content content: contents){
+        for (Content content : contents) {
 
             TextSegment segment = content.textSegment();
-//            System.out.println("<------------------segment text:" + segment.text()+"-------------------->");
             prompt.append(
                     """
                             Destination: %s
@@ -55,11 +52,8 @@ public class TravelContentInjector
                             
                             content: %s
                             """.formatted(
-                                    segment.metadata()
-                                            .getString("destination"),
-
-                            segment.metadata()
-                                    .getString("section"),
+                            segment.metadata().getString("destination"),
+                            segment.metadata().getString("section"),
                             segment.text()
                     )
             );
@@ -72,15 +66,8 @@ public class TravelContentInjector
                 %s
                 """.formatted(question));
 
-        System.out.println(
-                "========== FINAL PROMPT =========="
-        );
-
-        System.out.println(prompt);
-
-        System.out.println(
-                "=================================="
-        );
+        log.debug("Content injector built prompt for question: {}", question);
+        log.trace("Full injected prompt:\n{}", prompt);
 
         return UserMessage.from(prompt.toString());
     }

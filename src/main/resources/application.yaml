@@ -6,6 +6,8 @@ spring:
 groq:
   api-key: ${GROQ_API_KEY}
   model-name: llama-3.3-70b-versatile
+#  model-name: llama-3.1-8b-instant
+#  model-name: meta-llama/llama-4-scout-17b-16e-instruct
   base-url: https://api.groq.com/openai/v1
 
 
@@ -13,10 +15,20 @@ qdrant:
   api-key: ${QDRANT_API_KEY}
   host-name: ${QDRANT_HOST_NAME}
   port: ${QDRANT_PORT}
-  collection-name: travel-docs
+  collection-name: travel-docs-ingestor
 
 huggingface:
   api-key: ${HUGGINGFACE_API_KEY}
   embedding-model: sentence-transformers/all-MiniLM-L6-v2
+
+unsplash:
+  api-key: ${UNSPLASH_API_KEY}
+  secret-key: ${UNSPLASH_SECRET_KEY}
+  base-url: https://api.unsplash.com
+
+# gemini:
+#   api-key: AQ.Ab8RN6JeXU4XFb-eJWDnfHvRHIm_q26HH9j4_P4BFKitdHOdYg
+#   model-name: gemini-1.5-flash-latest
+
 
 

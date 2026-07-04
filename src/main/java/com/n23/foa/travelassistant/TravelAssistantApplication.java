@@ -18,19 +18,18 @@ public class TravelAssistantApplication {
     public static void main(String[] args) throws IOException {
         SpringApplication.run(TravelAssistantApplication.class, args);
 
-
-//        TravelSectionExtractor extractor = new MarkdownSectionExtractor();
-//
-//        Path mdPath = Path.of("C:/Users/Nisarg/OneDrive/Desktop/java/Langchain4j/Projects/Travel Assistant/knowledge-base/destinations/goa.md");
-//
-//        System.out.println(Files.readString(mdPath));
-//
-////        TravelIngestionService ingestionService = new TravelIngestionService();
-//
-//
-//        Test test =new Test(new TravelIngestionService());
-
-
+        // TravelSectionExtractor extractor = new MarkdownSectionExtractor();
+        //
+        // Path mdPath =
+        // Path.of("C:/Users/Nisarg/OneDrive/Desktop/java/Langchain4j/Projects/Travel
+        // Assistant/knowledge-base/destinations/goa.md");
+        //
+        // System.out.println(Files.readString(mdPath));
+        //
+        //// TravelIngestionService ingestionService = new TravelIngestionService();
+        //
+        //
+        // Test test =new Test(new TravelIngestionService());
 
     }
 

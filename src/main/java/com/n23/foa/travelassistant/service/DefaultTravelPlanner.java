@@ -7,12 +7,14 @@ import com.n23.foa.travelassistant.dto.ValidationResult;
 import com.n23.foa.travelassistant.extractors.TripConstraintsExtractor;
 import com.n23.foa.travelassistant.retriever.meltisection_retriever.MultiSectionRetriever;
 import dev.langchain4j.rag.content.Content;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Slf4j
 @Service
 public class DefaultTravelPlanner implements TravelPlannerAgent {
 
@@ -80,27 +82,17 @@ public class DefaultTravelPlanner implements TravelPlannerAgent {
                     validator.suggestion());
         }
 
-        System.out.println(constraints);
-        System.out.println(validator);
+        log.info("Planning itinerary for: {}", constraints);
+        log.debug("Feasibility result: {}", validator);
 
         String plan = itineraryPlanner.plan(sessionId, constraints, contents, validator);
 
-        System.out.println(plan);
+        log.debug("Itinerary generated successfully for session: {}", sessionId);
         return plan;
     }
 
     /**
      * Extracted constraints ko cached constraints ke saath merge karta hai.
-     *
-     * Case 1: "Plan 5-day Goa trip ₹30k" → extracted = { Goa, 5, 30000 }
-     * → No cache exists → return extracted as-is
-     *
-     * Case 2: "make it cheaper" → extracted = { null, null, null }
-     * → Cache has { Goa, 5, 30000 } → return cached
-     *
-     * Case 3: "change to 3 days" → extracted = { null, 3, null }
-     * → Cache has { Goa, 5, 30000 } → return { Goa, 3, 30000 }
-     * (sirf days update hua, baaki cached se aaya)
      */
     private TripConstraints resolveConstraints(String sessionId, TripConstraints extracted) {
 

@@ -35,7 +35,7 @@ public class EmbeddingConfig {
 
 
     @Bean
-    public EmbeddingModel embeddingModel(){
+    public EmbeddingModel embeddingModel() {
         return HuggingFaceEmbeddingModel.builder()
                 .accessToken(huggingFaceApiKey)
                 .modelId(embeddingModel)
@@ -45,13 +45,12 @@ public class EmbeddingConfig {
     }
 
     @Bean
-    public EmbeddingStore<TextSegment> embeddingStore(){
+    public EmbeddingStore<TextSegment> embeddingStore() {
         return QdrantEmbeddingStore.builder()
                 .apiKey(qdrantApiKey)
                 .port(port)
                 .host(qdrantHost)
-//                .collectionName(collectionName)
-                .collectionName("travel-docs-ingestor")
+                .collectionName(collectionName)
                 .useTls(true)
                 .build();
     }

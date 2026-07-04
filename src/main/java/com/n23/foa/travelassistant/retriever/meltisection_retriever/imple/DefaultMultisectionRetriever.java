@@ -11,6 +11,7 @@ import dev.langchain4j.store.embedding.EmbeddingSearchResult;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.filter.Filter;
 import dev.langchain4j.store.embedding.filter.logical.And;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import static dev.langchain4j.store.embedding.filter.MetadataFilterBuilder.metadataKey;
 
+@Slf4j
 @Service
 public class DefaultMultisectionRetriever
         implements MultiSectionRetriever {
@@ -44,55 +46,40 @@ public class DefaultMultisectionRetriever
     @Override
     public List<Content> retrieve(TripConstraints constraints) {
 
-        String destination = constraints.destination();
+        String destinationRaw = constraints.destination();
 
-        if (destination == null){
+        if (destinationRaw == null || destinationRaw.isBlank()) {
             return List.of();
         }
 
-        List<Content> contents =
-                new ArrayList<>();
+        // Capitalize first letter to match exact casing in MD files e.g. "kerala" -> "Kerala"
+        String destination = destinationRaw.trim().substring(0, 1).toUpperCase() + 
+                             destinationRaw.trim().substring(1).toLowerCase();
 
-        for (String section : SECTIONS){
-            Content content = retrieveSection(
-                    destination,
-                    section
-            );
+        List<Content> contents = new ArrayList<>();
 
-            if (content != null){
+        for (String section : SECTIONS) {
+            Content content = retrieveSection(destination, section);
+
+            if (content != null) {
                 contents.add(content);
             }
 
-            System.out.println(
-                    "Retrieving : "
-                            + destination
-                            + " -> "
-                            + section
-            );
+            log.debug("Retrieving: {} -> {}", destination, section);
         }
-
-
 
         return contents;
     }
 
-    private Content retrieveSection(
-            String destination,
-            String section
-    ) {
+    private Content retrieveSection(String destination, String section) {
         Filter filter = new And(
-                metadataKey("destination")
-                        .isEqualTo(destination),
-
-                metadataKey("section")
-                        .isEqualTo(section)
+                metadataKey("destination").isEqualTo(destination),
+                metadataKey("section").isEqualTo(section)
         );
 
         String query = destination + " " + section;
 
-        Embedding queryEmbedding = embeddingModel
-                .embed(query)
-                .content();
+        Embedding queryEmbedding = embeddingModel.embed(query).content();
 
         EmbeddingSearchRequest searchRequest = EmbeddingSearchRequest.builder()
                 .queryEmbedding(queryEmbedding)
@@ -100,48 +87,14 @@ public class DefaultMultisectionRetriever
                 .maxResults(3)
                 .build();
 
-        EmbeddingSearchResult<TextSegment> result =
-                embeddingStore.search(searchRequest);
+        EmbeddingSearchResult<TextSegment> result = embeddingStore.search(searchRequest);
 
-        if (result.matches().isEmpty()){
+        if (result.matches().isEmpty()) {
             return null;
         }
 
-        TextSegment segment = result.matches()
-                .getFirst()
-                .embedded();
-
-
-//        System.out.println(
-//                "\n================================"
-//        );
-//
-//        System.out.println(
-//                "Destination : " + destination
-//        );
-//
-//        System.out.println(
-//                "Section     : " + section
-//        );
-//
-//        System.out.println(
-//                "Metadata    : "
-//                        + segment.metadata()
-//        );
-//
-//        System.out.println(
-//                "Text        :\n"
-//                        + segment.text()
-//        );
-//
-//        System.out.println(
-//                "================================"
-//        );
-
+        TextSegment segment = result.matches().getFirst().embedded();
 
         return Content.from(segment);
     }
-
-
-
 }

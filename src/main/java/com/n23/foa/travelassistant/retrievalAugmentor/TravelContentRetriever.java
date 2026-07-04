@@ -14,12 +14,14 @@ import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
 import dev.langchain4j.store.embedding.EmbeddingSearchResult;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.filter.Filter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
 
+@Slf4j
 @Component
 public class TravelContentRetriever implements ContentRetriever {
 
@@ -42,47 +44,30 @@ public class TravelContentRetriever implements ContentRetriever {
 
         String question = query.text();
 
-        TravelIntent intent =
-                intentClassifier.classify(question);
+        TravelIntent intent = intentClassifier.classify(question);
 
-        Optional<String> destination =
-                destinationExtractor.extract(question);
+        Optional<String> destination = destinationExtractor.extract(question)
+            .map(String::trim)
+            .map(d -> d.substring(0, 1).toUpperCase() + d.substring(1).toLowerCase());
 
-        Filter filter = filterBuilder.build(
-                intent,
-                destination
-        );
+        Filter filter = filterBuilder.build(intent, destination);
 
-        Embedding queryEmbedding =
-                embeddingModel
-                        .embed(question)
-                        .content();
+        Embedding queryEmbedding = embeddingModel.embed(question).content();
 
-        EmbeddingSearchRequest searchRequest =
-                EmbeddingSearchRequest.builder()
+        EmbeddingSearchRequest searchRequest = EmbeddingSearchRequest.builder()
                 .queryEmbedding(queryEmbedding)
                 .filter(filter)
                 .maxResults(5)
                 .build();
 
-        EmbeddingSearchResult<TextSegment> result =
-                embeddingStore.search(searchRequest);
+        EmbeddingSearchResult<TextSegment> result = embeddingStore.search(searchRequest);
 
         List<Content> contentList = result.matches()
                 .stream()
-                .map(
-                        match -> Content.from(match.embedded())
-                )
+                .map(match -> Content.from(match.embedded()))
                 .toList();
 
-        contentList.forEach( c->{
-
-            System.out.println(c);
-            System.out.println();
-
-                }
-        );
-
+        log.debug("Retrieved {} content segments for query: {}", contentList.size(), question);
 
         return contentList;
     }
