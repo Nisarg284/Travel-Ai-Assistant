@@ -1,5 +1,5 @@
 package com.n23.foa.travelassistant.agents;
 
 public interface TravelAssistant {
-    String chat(String sessionId,String question);
+    com.n23.foa.travelassistant.dto.AiResponse chat(String sessionId, String userMessage);
 }

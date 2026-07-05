@@ -36,22 +36,20 @@ public class DefaultTravelAssistant
     }
 
     @Override
-    public String chat(String sessionId, String question) {
+    public com.n23.foa.travelassistant.dto.AiResponse chat(String sessionId, String question) {
 
         TravelRequestType requestType = classifier.classify(question);
 
         log.info("Request classified as: {} for session: {}", requestType, sessionId);
 
-        String response;
-
         if (requestType == TravelRequestType.ITINERARY) {
             log.info("Routing to Supervisor Agent (multi-agent pipeline)");
-            response = supervisorAgent.orchestrate(sessionId, question);
+            com.n23.foa.travelassistant.dto.TravelPlanResponse plan = supervisorAgent.orchestrate(sessionId, question);
+            return com.n23.foa.travelassistant.dto.AiResponse.itinerary(plan);
         } else {
             log.info("Routing to Knowledge Agent (RAG Q&A)");
-            response = knowledgeAgent.chat(sessionId, question);
+            String chatResponse = knowledgeAgent.chat(sessionId, question);
+            return com.n23.foa.travelassistant.dto.AiResponse.chat(chatResponse);
         }
-
-        return response;
     }
 }

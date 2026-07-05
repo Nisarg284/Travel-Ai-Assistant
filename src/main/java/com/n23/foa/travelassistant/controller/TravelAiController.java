@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ai")
+@CrossOrigin(origins = "*")
 public class TravelAiController {
 
     private final TravelAssistant assistantService;
@@ -15,7 +16,7 @@ public class TravelAiController {
     }
 
     @PostMapping("/ask/{sessionId}")
-    public String ask(@PathVariable String sessionId, @RequestBody String question) {
+    public com.n23.foa.travelassistant.dto.AiResponse ask(@PathVariable String sessionId, @RequestBody String question) {
         return assistantService.chat(sessionId, question);
     }
 }

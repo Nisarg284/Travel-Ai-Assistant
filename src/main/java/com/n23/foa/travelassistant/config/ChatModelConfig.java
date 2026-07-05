@@ -18,28 +18,40 @@ public class ChatModelConfig {
     @Value("${groq.base-url}")
     private String baseUrl;
 
-    // @Value("${gemini.api-key}")
-    // private String geminiApiKey;
+    @Value("${groq.api-key-2}")
+    private String apiKey2;
 
-    // @Value("${gemini.model-name}")
-    // private String geminiModelName;
-
-    // @Bean
-    // @Primary
-    // public ChatModel geminiConfigChatModel(){
-    // return GoogleAiGeminiChatModel.builder()
-    // .apiKey(geminiApiKey)
-    // .modelName(geminiModelName)
-    // .build();
-    // }
+    @Value("${groq.api-key-3}")
+    private String apiKey3;
 
     @Bean
+    @org.springframework.context.annotation.Primary
     public ChatModel chatModel() {
         return OpenAiChatModel.builder()
                 .apiKey(apiKey)
                 .modelName(modelName)
                 .baseUrl(baseUrl)
-                .maxRetries(5)
+//                .maxRetries(5)
+                .build();
+    }
+
+    @Bean("chatModel2")
+    public ChatModel chatModel2() {
+        return OpenAiChatModel.builder()
+                .apiKey(apiKey2)
+                .modelName(modelName)
+                .baseUrl(baseUrl)
+//                .maxRetries(5)
+                .build();
+    }
+
+    @Bean("chatModel3")
+    public ChatModel chatModel3() {
+        return OpenAiChatModel.builder()
+                .apiKey(apiKey3)
+                .modelName(modelName)
+                .baseUrl(baseUrl)
+//                .maxRetries(5)
                 .build();
     }
 }
