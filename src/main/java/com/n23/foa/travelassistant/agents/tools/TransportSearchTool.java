@@ -59,6 +59,7 @@ public class TransportSearchTool {
             sb.append(String.format("| %d | %s | %s | %s | %s | %.1f | ₹%.0f |\n",
                     count, opt.mode(), opt.operator(), opt.departure(),
                     opt.arrival(), opt.duration(), opt.price()));
+            if (count >= 3) break; // Limit to top 3 to save tokens
         }
 
         sb.append("\nTotal: ").append(options.size()).append(" options found.\n");

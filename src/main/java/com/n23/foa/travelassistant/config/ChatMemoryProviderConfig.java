@@ -17,7 +17,7 @@ public class ChatMemoryProviderConfig {
         return memoryId -> MessageWindowChatMemory.builder()
                 .chatMemoryStore(store)
                 .id(memoryId)
-                .maxMessages(20)
+                .maxMessages(20) // CRITICAL: Needs 20+ to remember origin prompt after 6 tool calls!
                 .build();
     }
 }

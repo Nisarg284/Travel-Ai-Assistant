@@ -17,7 +17,7 @@ public class TripConstraintsExtractorConfig {
     ){
         return AiServices.builder(TripConstraintsExtractor.class)
                 .chatModel(chatModel)
-                .chatMemory(MessageWindowChatMemory.withMaxMessages(20))
+                .chatMemory(MessageWindowChatMemory.withMaxMessages(5))
                 .build();
     }
 }

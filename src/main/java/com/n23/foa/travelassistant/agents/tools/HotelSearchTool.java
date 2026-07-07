@@ -63,7 +63,7 @@ public class HotelSearchTool {
             sb.append(String.format("| %d | %s | %s | %s | ₹%.0f | %.1f⭐ | %s |\n",
                     count, hotel.name(), hotel.area(), hotel.type(),
                     hotel.pricePerNight(), hotel.rating(), hotel.amenities()));
-            if (count >= 6) break; // Limit to top 6 to save tokens
+            if (count >= 3) break; // Limit to top 3 to save tokens
         }
 
         sb.append("\nTotal results: ").append(hotels.size()).append(" hotels found.\n");
