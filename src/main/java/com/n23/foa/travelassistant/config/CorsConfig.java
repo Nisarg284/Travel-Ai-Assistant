@@ -19,7 +19,8 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry){
                 registry.addMapping("/**")
                         .allowedOrigins(
-                                "http://localhost:3000"
+                                "http://localhost:3000",
+                                "https://travel-app-frontend-psi-two.vercel.app/"
                         ).allowedMethods("*")
                         .allowedHeaders("*");
         }

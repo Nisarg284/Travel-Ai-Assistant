@@ -1,5 +1,7 @@
 package com.n23.foa.travelassistant.agents;
 
+import com.n23.foa.travelassistant.dto.AiResponse;
+
 public interface TravelAssistant {
-    com.n23.foa.travelassistant.dto.AiResponse chat(String sessionId, String userMessage);
+    AiResponse chat(String sessionId, String userMessage);
 }
