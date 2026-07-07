@@ -58,9 +58,6 @@ public class ChatModelConfig {
                 .baseUrl(baseUrl)
                 .modelName(modelName)
                 .maxTokens(4096)
-                .customHeaders(Map.of(
-                        "HTTP-Referer", "http://localhost:3000/",
-                        "X-Title", "Travel Assistant"))
                 .build();
     }
 
@@ -77,9 +74,6 @@ public class ChatModelConfig {
                 .baseUrl(baseUrl)
                 .modelName(modelName)
                 .maxTokens(4096)
-                .customHeaders(Map.of(
-                        "HTTP-Referer", "http://localhost:3000/",
-                        "X-Title", "Travel Assistant"))
                 .build();
     }
 
@@ -96,9 +90,6 @@ public class ChatModelConfig {
                 .baseUrl(baseUrl)
                 .modelName(modelName)
                 .maxTokens(4096)
-                .customHeaders(Map.of(
-                        "HTTP-Referer", "http://localhost:3000/",
-                        "X-Title", "Travel Assistant"))
                 .build();
     }
 
