@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: Travel Assistant
+
+
+groq:
+  api-key: ${GROQ_API_KEY}
+  api-key-2: ${GROQ_API_KEY_2:${GROQ_API_KEY}}
+  api-key-3: ${GROQ_API_KEY_3:${GROQ_API_KEY}}
+
+#  model-name: llama-3.1-8b-instant
+#  model-name: meta-llama/llama-3.3-70b-instruct
+#  model-name: Llama-3.3-70b-Versatile
+  model-name: openai/gpt-oss-120b:free
+#  base-url: https://openrouter.ai/api/v1
+  base-url: https://api.groq.com/openai/v1
+
+openrouter:
+  api-key: ${OPENROUTER_API_KEY}
+  api-key-2: ${OPENROUTER_API_KEY_2:${OPENROUTER_API_KEY}}
+  api-key-3: ${OPENROUTER_API_KEY_3:${OPENROUTER_API_KEY}}
+#  model-name: openai/gpt-oss-20b:free
+#  best
+#  model-name: cohere/north-mini-code:free
+  model-name: google/gemini-3-flash-preview
+#  model-name: meta-llama/llama-4-scout
+#  model-name: openai/gpt-oss-120b:free
+#  model-name: poolside/laguna-m.1:free
+
+
+  #  model-name: nvidia/nemotron-3-ultra-550b-a55b:free
+  base-url: https://openrouter.ai/api/v1
+#  base-url: https://api.groq.com/openai/v1
+
+qdrant:
+  api-key: ${QDRANT_API_KEY}
+  host-name: ${QDRANT_HOST_NAME}
+  port: ${QDRANT_PORT}
+  collection-name: travel-docs-ingestor
+
+huggingface:
+  api-key: ${HUGGINGFACE_API_KEY}
+  embedding-model: sentence-transformers/all-MiniLM-L6-v2
+
+unsplash:
+  api-key: ${UNSPLASH_API_KEY:}
+  secret-key: ${UNSPLASH_SECRET_KEY:}
+  base-url: https://api.unsplash.com
