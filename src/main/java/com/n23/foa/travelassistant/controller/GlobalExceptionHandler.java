@@ -1,12 +1,14 @@
 package com.n23.foa.travelassistant.controller;
 
 import com.n23.foa.travelassistant.dto.AiResponse;
+import dev.langchain4j.exception.TimeoutException;
 import dev.langchain4j.service.output.OutputParsingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 /**
  * Global exception handler — catches unhandled exceptions and returns
@@ -37,6 +39,22 @@ public class GlobalExceptionHandler {
         return ResponseEntity.ok(response);
     }
 
+    @ExceptionHandler(TimeoutException.class)
+    public ResponseEntity<AiResponse> handleTimeoutException(TimeoutException e) {
+        log.warn("AI model request timed out: {}", e.getMessage());
+
+        AiResponse response = AiResponse.chat(
+                "The AI model took too long to respond. This can happen with complex travel plans. Please try again — it usually works on retry."
+        );
+        return ResponseEntity.status(HttpStatus.GATEWAY_TIMEOUT).body(response);
+    }
+
+    @ExceptionHandler(NoResourceFoundException.class)
+    public ResponseEntity<Void> handleNoResourceFound(NoResourceFoundException e) {
+        // Silently return 404 for static resource requests like favicon.ico
+        return ResponseEntity.notFound().build();
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<AiResponse> handleGenericException(Exception e) {
         log.error("Unexpected error: ", e);
@@ -47,3 +65,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
 }
+
