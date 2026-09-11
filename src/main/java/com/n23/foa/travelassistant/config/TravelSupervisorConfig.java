@@ -14,7 +14,8 @@ public class TravelSupervisorConfig {
 
     @Bean
     public TravelSupervisorAgent travelSupervisorAgent(
-            @Qualifier("chatModel3") ChatModel chatModel,
+//            @Qualifier("chatModel3")
+            ChatModel chatModel,
             ChatMemoryProvider chatMemoryProvider,
             HotelSearchTool hotelSearchTool,
             TransportSearchTool transportSearchTool,

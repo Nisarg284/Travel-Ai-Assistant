@@ -5,6 +5,6 @@ import dev.langchain4j.service.UserMessage;
 
 public interface TravelKnowledgeAgent {
 
-    String chat(@MemoryId String sessionId,@UserMessage String question);
+   String chat(@MemoryId String sessionId, @UserMessage String question);
 
 }

@@ -13,7 +13,8 @@ public class TripConstraintsExtractorConfig {
 
     @Bean
     public TripConstraintsExtractor tripConstraintsExtractor(
-            @Qualifier("chatModel3") ChatModel chatModel
+//            @Qualifier("chatModel3")
+            ChatModel chatModel
     ){
         return AiServices.builder(TripConstraintsExtractor.class)
                 .chatModel(chatModel)

@@ -12,7 +12,8 @@ public class TripFeasibilityExpertConfig {
 
     @Bean
     public TripFeasibilityExpert tripFeasibilityExpert(
-            @Qualifier("chatModel2") ChatModel chatModel
+//            @Qualifier("chatModel2")
+            ChatModel chatModel
     ){
         return AiServices.create(
                 TripFeasibilityExpert.class,

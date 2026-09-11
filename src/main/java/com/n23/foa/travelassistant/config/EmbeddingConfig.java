@@ -21,14 +21,15 @@ public class EmbeddingConfig {
     @Value("${qdrant.port}")
     private int port;
 
-    @Value("${huggingface.api-key}")
-    private String huggingFaceApiKey;
 
     @Value("${qdrant.collection-name}")
     private String collectionName;
 
     @Value("${qdrant.api-key}")
     private String qdrantApiKey;
+
+    @Value("${huggingface.api-key}")
+    private String huggingFaceApiKey;
 
     @Value("${huggingface.embedding-model}")
     private String embeddingModel;

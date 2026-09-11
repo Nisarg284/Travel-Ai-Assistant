@@ -18,8 +18,7 @@ public class BudgetAgentTool {
     public String estimateBudget(
             @P("The travel destination, e.g. Goa, Jaipur, Kerala, Manali") String destination,
             @P("Number of days for the trip") String daysStr,
-            @P("Travel style: backpacker, comfort, or luxury") String travelStyle
-    ) {
+            @P("Travel style: backpacker, comfort, or luxury") String travelStyle) {
         int days;
         try {
             days = Integer.parseInt(daysStr.replaceAll("[^0-9]", ""));

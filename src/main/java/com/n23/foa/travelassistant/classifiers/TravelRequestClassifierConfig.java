@@ -13,7 +13,9 @@ public class TravelRequestClassifierConfig {
 
 
     @Bean
-    public TravelRequestClassifier classifier(@Qualifier("chatModel2") ChatModel chatModel){
+    public TravelRequestClassifier classifier(
+//            @Qualifier("chatModel2")
+            ChatModel chatModel){
         return AiServices.builder(TravelRequestClassifier.class)
                 .chatMemory(MessageWindowChatMemory.withMaxMessages(20))
                 .chatModel(chatModel)

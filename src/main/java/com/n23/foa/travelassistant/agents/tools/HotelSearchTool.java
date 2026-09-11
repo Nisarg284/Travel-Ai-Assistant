@@ -32,8 +32,7 @@ public class HotelSearchTool {
     public String searchHotels(
             @P("The travel destination name, e.g. Goa, Jaipur, Kerala, Manali") String destination,
             @P("Maximum budget per night in INR per room") String budgetPerNightStr,
-            @P("Travel style preference: backpacker, comfort, or luxury") String travelStyle
-    ) {
+            @P("Travel style preference: backpacker, comfort, or luxury") String travelStyle) {
         int budgetPerNight;
         try {
             budgetPerNight = Integer.parseInt(budgetPerNightStr.replaceAll("[^0-9]", ""));
@@ -63,7 +62,8 @@ public class HotelSearchTool {
             sb.append(String.format("| %d | %s | %s | %s | ₹%.0f | %.1f⭐ | %s |\n",
                     count, hotel.name(), hotel.area(), hotel.type(),
                     hotel.pricePerNight(), hotel.rating(), hotel.amenities()));
-            if (count >= 3) break; // Limit to top 3 to save tokens
+            if (count >= 3)
+                break; // Limit to top 3 to save tokens
         }
 
         sb.append("\nTotal results: ").append(hotels.size()).append(" hotels found.\n");

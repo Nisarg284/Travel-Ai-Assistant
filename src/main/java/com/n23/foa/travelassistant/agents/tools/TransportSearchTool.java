@@ -26,14 +26,14 @@ public class TransportSearchTool {
         this.transportService = transportService;
     }
 
-    @Tool("Search for transport options (flights, trains, buses) to reach a travel destination from a specific origin city. " +
+    @Tool("Search for transport options (flights, trains, buses) to reach a travel destination from a specific origin city. "
+            +
             "Returns available options with operator names, departure/arrival times, duration, and prices. " +
             "If user hasn't mentioned origin city, use 'Delhi' as default.")
     public String searchTransport(
             @P("Origin city name, e.g. Mumbai, Delhi, Bangalore, Pune, Chandigarh") String origin,
             @P("Destination city name, e.g. Goa, Jaipur, Kerala, Manali") String destination,
-            @P("Preferred travel mode: flight, train, or bus. Use 'any' if no preference.") String preferredMode
-    ) {
+            @P("Preferred travel mode: flight, train, or bus. Use 'any' if no preference.") String preferredMode) {
         log.info("🚌 TransportSearchTool invoked — {} → {}, preferred: {}", origin, destination, preferredMode);
 
         List<TransportOption> options = transportService.searchTransport(origin, destination, preferredMode);
@@ -59,7 +59,8 @@ public class TransportSearchTool {
             sb.append(String.format("| %d | %s | %s | %s | %s | %.1f | ₹%.0f |\n",
                     count, opt.mode(), opt.operator(), opt.departure(),
                     opt.arrival(), opt.duration(), opt.price()));
-            if (count >= 3) break; // Limit to top 3 to save tokens
+            if (count >= 3)
+                break; // Limit to top 3 to save tokens
         }
 
         sb.append("\nTotal: ").append(options.size()).append(" options found.\n");

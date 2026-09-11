@@ -17,7 +17,8 @@ public class TravelKnowledgeAgentConfig {
 
     @Bean
     public TravelKnowledgeAgent travelKnowledgeAgent(
-            @Qualifier("chatModel2") ChatModel chatModel,
+//            @Qualifier("chatModel2")
+            ChatModel chatModel,
             RetrievalAugmentor retrievalAugmentor,
             ChatMemoryProvider store
             )
