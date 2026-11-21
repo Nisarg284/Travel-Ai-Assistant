@@ -76,6 +76,7 @@ public class EmbeddingConfig {
 
     @Bean
     public EmbeddingStore<TextSegment> embeddingStore() {
+        ensureCollectionExists(qdrantHost, port, qdrantApiKey, collectionName);
         return QdrantEmbeddingStore.builder()
                 .apiKey(qdrantApiKey)
                 .port(port)
@@ -83,5 +84,34 @@ public class EmbeddingConfig {
                 .collectionName(collectionName)
                 .useTls(true)
                 .build();
+    }
+
+    private void ensureCollectionExists(String host, int port, String apiKey, String collection) {
+        if (host == null || host.isBlank() || host.equals("localhost")) {
+            return;
+        }
+        try {
+            io.qdrant.client.QdrantClient client = new io.qdrant.client.QdrantClient(
+                    io.qdrant.client.QdrantGrpcClient.newBuilder(host, port, true)
+                            .withApiKey(apiKey)
+                            .build()
+            );
+            java.util.List<String> collections = client.listCollectionsAsync().get(5, java.util.concurrent.TimeUnit.SECONDS);
+            log.info("Available Qdrant collections: {}", collections);
+            if (!collections.contains(collection)) {
+                log.info("Collection '{}' does not exist in Qdrant. Creating it with 384 dimensions and Cosine distance...", collection);
+                client.createCollectionAsync(
+                        collection,
+                        io.qdrant.client.grpc.Collections.VectorParams.newBuilder()
+                                .setSize(384)
+                                .setDistance(io.qdrant.client.grpc.Collections.Distance.Cosine)
+                                .build()
+                ).get(10, java.util.concurrent.TimeUnit.SECONDS);
+                log.info("Collection '{}' created successfully in Qdrant!", collection);
+            }
+            client.close();
+        } catch (Exception e) {
+            log.warn("Could not automatically verify/create Qdrant collection '{}': {}", collection, e.getMessage());
+        }
     }
 }

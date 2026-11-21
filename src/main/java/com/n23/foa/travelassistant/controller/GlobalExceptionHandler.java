@@ -59,8 +59,17 @@ public class GlobalExceptionHandler {
     public ResponseEntity<AiResponse> handleGenericException(Exception e) {
         log.error("Unexpected error: ", e);
 
+        Throwable rootCause = e;
+        while (rootCause.getCause() != null && rootCause.getCause() != rootCause) {
+            rootCause = rootCause.getCause();
+        }
+        String errorDetail = rootCause.getMessage() != null ? rootCause.getMessage() : e.getMessage();
+        if (errorDetail == null || errorDetail.isBlank()) {
+            errorDetail = "Something went wrong while processing your request. Please try again.";
+        }
+
         AiResponse response = AiResponse.chat(
-                "Something went wrong while processing your request. Please try again."
+                "Error processing request: " + errorDetail
         );
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }

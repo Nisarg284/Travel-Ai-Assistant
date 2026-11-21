@@ -45,6 +45,11 @@ public class TravelAiController {
         }
     }
 
+    @PostMapping("/ask")
+    public AiResponse askDefaultSession(@RequestBody(required = false) String question) {
+        return ask("default-session", question);
+    }
+
     @PostMapping("/ask/{sessionId}")
     public AiResponse ask(@PathVariable String sessionId, @RequestBody(required = false) String question) {
         if (question == null || question.isBlank()) {
