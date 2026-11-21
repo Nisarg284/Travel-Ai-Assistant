@@ -5,8 +5,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.n23.foa.travelassistant.agents.TravelAssistant;
 import com.n23.foa.travelassistant.dto.AiResponse;
+import com.n23.foa.travelassistant.ingestion.IngestorTestService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -15,10 +20,29 @@ import org.springframework.web.bind.annotation.*;
 public class TravelAiController {
 
     private final TravelAssistant assistantService;
+    private final IngestorTestService ingestorService;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public TravelAiController(TravelAssistant assistantService) {
+    public TravelAiController(TravelAssistant assistantService, IngestorTestService ingestorService) {
         this.assistantService = assistantService;
+        this.ingestorService = ingestorService;
+    }
+
+    @RequestMapping(value = "/ingest", method = {RequestMethod.GET, RequestMethod.POST})
+    public ResponseEntity<Map<String, Object>> ingest() {
+        try {
+            int count = ingestorService.ingest();
+            return ResponseEntity.ok(Map.of(
+                    "status", "SUCCESS",
+                    "message", "Successfully ingested " + count + " destination sections into Qdrant vector store."
+            ));
+        } catch (Exception e) {
+            log.error("Failed to ingest knowledge base: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of(
+                    "status", "ERROR",
+                    "message", "Failed to ingest knowledge base: " + e.getMessage()
+            ));
+        }
     }
 
     @PostMapping("/ask/{sessionId}")

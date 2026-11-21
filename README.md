@@ -133,6 +133,23 @@ Or pass a JSON object:
 }
 ```
 
+### Ingest Knowledge Base into Qdrant
+
+Trigger ingestion of destination markdown files (`goa.md`, `jaipur.md`, `kerala.md`, `manali.md`) into your Qdrant cluster:
+
+```http
+POST /ai/ingest
+```
+Or open in a browser: `http://localhost:8080/ai/ingest`
+
+Response:
+```json
+{
+  "status": "SUCCESS",
+  "message": "Successfully ingested 120 destination sections into Qdrant vector store."
+}
+```
+
 ### Health Check
 
 ```http

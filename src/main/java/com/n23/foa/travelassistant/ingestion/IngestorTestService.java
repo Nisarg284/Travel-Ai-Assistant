@@ -26,11 +26,11 @@ public class IngestorTestService {
         this.sectionExtractor = sectionExtractor;
     }
 
-    public void ingest() throws IOException {
+    public int ingest() throws IOException {
         Path folderPath = Paths.get("knowledge-base", "destinations");
         if (!Files.exists(folderPath)) {
             log.warn("Knowledge base directory does not exist at: {}", folderPath.toAbsolutePath());
-            return;
+            return 0;
         }
 
         List<Document> allDocuments;
@@ -57,5 +57,7 @@ public class IngestorTestService {
         }
 
         ingestor.ingest(allDocuments);
+        log.info("Successfully ingested {} sections into vector store", allDocuments.size());
+        return allDocuments.size();
     }
 }
