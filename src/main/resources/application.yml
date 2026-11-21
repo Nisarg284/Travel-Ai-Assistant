@@ -1,3 +1,9 @@
+server:
+  tomcat:
+    threads:
+      max: 10
+      min-spare: 2
+
 spring:
   application:
     name: Travel Assistant
@@ -12,7 +18,7 @@ qdrant:
   api-key: ${QDRANT_API_KEY:demo-key}
   host-name: ${QDRANT_HOST_NAME:localhost}
   port: ${QDRANT_PORT:6334}
-  collection-name: ${QDRANT_COLLECTION:travel-docs-ingestor}
+  collection-name: ${QDRANT_COLLECTION:travel-ai}
 
 unsplash:
   api-key: ${UNSPLASH_API_KEY:}

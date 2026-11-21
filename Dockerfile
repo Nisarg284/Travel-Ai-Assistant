@@ -49,8 +49,9 @@ EXPOSE ${PORT}
 # Switch to the non-root user
 USER appuser
 
-# JVM tuning for Render's constrained memory
-ENV JAVA_OPTS="-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 -XX:+UseSerialGC"
+# JVM tuning for Render's 512MB constrained memory
+# Heap capped at 180MB to leave headroom for Metaspace (~90MB), ONNX native model runtime (~90MB), and threads
+ENV JAVA_OPTS="-XX:+UseContainerSupport -Xms64m -Xmx180m -XX:MaxMetaspaceSize=100m -XX:CompressedClassSpaceSize=24m -Xss256k -XX:+UseSerialGC"
 
 # Run the application — Spring Boot picks up PORT via server.port
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Dserver.port=$PORT -jar app.jar"]
