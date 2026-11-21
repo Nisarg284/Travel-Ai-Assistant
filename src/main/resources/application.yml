@@ -14,10 +14,6 @@ qdrant:
   port: ${QDRANT_PORT:6334}
   collection-name: ${QDRANT_COLLECTION:travel-docs-ingestor}
 
-huggingface:
-  api-key: ${HUGGINGFACE_API_KEY:demo-key}
-  embedding-model: ${HUGGINGFACE_EMBEDDING_MODEL:sentence-transformers/all-MiniLM-L6-v2}
-
 unsplash:
   api-key: ${UNSPLASH_API_KEY:}
   secret-key: ${UNSPLASH_SECRET_KEY:}
