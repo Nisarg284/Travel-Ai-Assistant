@@ -34,6 +34,9 @@ public class UnsplashImageService {
             log.debug("Unsplash API key not configured — skipping image search");
             return List.of();
         }
+        if (query == null || query.isBlank()) {
+            return List.of();
+        }
         try {
             Map<String, Object> response = webClient.get()
                     .uri(uriBuilder -> uriBuilder

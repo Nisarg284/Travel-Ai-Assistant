@@ -9,8 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CorsConfig {
 
-
-
     @Bean
     public WebMvcConfigurer corsConfigurer(){
         return new WebMvcConfigurer() {
@@ -18,13 +16,13 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry){
                 registry.addMapping("/**")
+                        .allowedOriginPatterns("*")
                         .allowedOrigins(
                                 "https://travel-app-frontend-psi-two.vercel.app",
                                 "http://localhost:3000"
-                        ).allowedMethods("*")
+                        ).allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
                         .allowedHeaders("*");
-        }
-
+            }
         };
     }
 }

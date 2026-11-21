@@ -34,6 +34,15 @@ public class TransportSearchTool {
             @P("Origin city name, e.g. Mumbai, Delhi, Bangalore, Pune, Chandigarh") String origin,
             @P("Destination city name, e.g. Goa, Jaipur, Kerala, Manali") String destination,
             @P("Preferred travel mode: flight, train, or bus. Use 'any' if no preference.") String preferredMode) {
+        if (destination == null || destination.isBlank()) {
+            return "Please provide a valid destination.";
+        }
+        if (origin == null || origin.isBlank()) {
+            origin = "Delhi";
+        }
+        if (preferredMode == null || preferredMode.isBlank()) {
+            preferredMode = "any";
+        }
         log.info("🚌 TransportSearchTool invoked — {} → {}, preferred: {}", origin, destination, preferredMode);
 
         List<TransportOption> options = transportService.searchTransport(origin, destination, preferredMode);

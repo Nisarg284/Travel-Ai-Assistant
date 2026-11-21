@@ -58,6 +58,9 @@ public class LocalExpertAgentTool {
       "Returns best time to visit, money-saving tips, local food recommendations, and travel hacks.")
   public String getLocalTips(
       @P("The travel destination, e.g. Goa, Jaipur, Kerala, Manali") String destination) {
+    if (destination == null || destination.isBlank()) {
+      return "Please provide a valid destination.";
+    }
     log.info("🗺️ LocalExpertAgentTool invoked — destination: {}", destination);
 
     String key = destination.toLowerCase().trim();

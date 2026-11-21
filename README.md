@@ -91,19 +91,20 @@ Each request flows through three sequential stages:
 
 ### Prerequisites
 
-- Java 17+
-- Maven 3.8+
-- An Anthropic or OpenAI API key
+- Java 25 (or JDK 21+)
+- Maven 3.8+ (or included `./mvnw`)
 
-### Installation
+### Installation & Run
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Nisarg284/Travel-Ai-Assistant.git
-cd travel-assistant-ai
+cd "Travel Assistant"
 
-# 2. Add your API key to src/main/resources/application.properties
-# langchain4j.anthropic.api-key=YOUR_KEY_HERE
+# 2. Configure environment variables (optional — defaults provided for tests/local)
+export SARVAM_API_KEY=your_api_key
+export AI_MODEL_NAME=sarvam-105b-conversations
+export AI_BASE_URL=https://api.sarvam.ai/v1
 
 # 3. Build and run
 ./mvnw spring-boot:run
@@ -113,42 +114,93 @@ cd travel-assistant-ai
 
 ## 📬 Usage
 
-Send a POST request with your trip constraints:
+### Chat & Itinerary Endpoint
+
+Send a POST request to ask a travel question or plan an itinerary:
 
 ```http
-POST /api/plan
+POST /ai/ask/my-session-id
 Content-Type: application/json
 
+"Plan a 3-day trip to Goa under ₹25,000 for 2 people"
+```
+
+Or pass a JSON object:
+
+```json
 {
-  "destination" : "Goa",
-  "days"        : 1,
-  "budget"      : 5000
+  "question": "Plan a 3-day trip to Goa under ₹25,000 for 2 people"
 }
 ```
 
-### Sample Response Structure
+### Health Check
 
+```http
+GET /health
 ```
-## 🗺️ Trip Overview
-Destination: Goa | Duration: 1 day | Budget: ₹5,000 | Estimated Spend: ₹1,350
+Response: `UP` (200 OK)
 
-## 💰 Budget Breakdown
-| Category      | Estimated Cost (₹) |
-|---------------|--------------------|
-| Accommodation | ₹600               |
-| Food          | ₹450               |
-| Local Travel  | ₹200               |
-| Activities    | ₹100               |
-| Miscellaneous | ₹000               |
-| Total         | ₹1,350             |
+### Sample Response Structure (`AiResponse`)
 
-## 📅 Day 1 – Sun, Sand & Old Goa
-Morning   – Baga Beach, Calangute walk
-Afternoon – Basilica of Bom Jesus, Se Cathedral
-Evening   – Anjuna flea market, sunset at Vagator
-🍽️ Meals  – Breakfast: chai + poha ₹60 | Lunch: fish thali ₹150 | Dinner: beach shack ₹250
-🏨 Stay   – Zostel Goa (dorm) ~₹600/night
-💸 Day Spend – ₹1,350
+```json
+{
+  "type": "ITINERARY",
+  "message": null,
+  "itinerary": {
+    "overview": {
+      "destination": "Goa",
+      "duration": "3 days",
+      "totalBudget": "₹25,000",
+      "groupSize": 2,
+      "style": "comfort"
+    },
+    "howToReach": [
+      {
+        "mode": "Flight",
+        "operator": "IndiGo",
+        "departure": "06:00",
+        "arrival": "08:30",
+        "duration": 2.5,
+        "price": 4500.0
+      }
+    ],
+    "hotels": [
+      {
+        "name": "Hotel Mandovi",
+        "area": "Panaji",
+        "type": "Hotel",
+        "pricePerNight": 2500.0,
+        "rating": 4.0,
+        "amenities": "AC, WiFi, Restaurant, Pool"
+      }
+    ],
+    "budgetBreakdown": {
+      "Accommodation": "₹10,000",
+      "Food": "₹7,500",
+      "Local Transport": "₹3,750",
+      "Activities": "₹2,500",
+      "Miscellaneous": "₹1,250"
+    },
+    "itinerary": [
+      {
+        "dayNumber": 1,
+        "theme": "Beaches & Water Sports",
+        "morningActivity": "Baga Beach walk & water sports",
+        "afternoonActivity": "Calangute beach shacks",
+        "eveningActivity": "Sunset at Anjuna",
+        "meals": "Goan Fish Curry thali",
+        "dailySpend": "₹3,500"
+      }
+    ],
+    "localInsights": [
+      "Rent a scooter (₹300-500/day) — best way to explore",
+      "Carry cash — many beach shacks don't accept cards"
+    ],
+    "destinationImages": [
+      "https://images.unsplash.com/..."
+    ]
+  }
+}
 ```
 
 ---
@@ -191,20 +243,18 @@ src/main/java/com/n23/foa/travelassistant/
 
 ## ⚙️ Configuration
 
-```properties
-# src/main/resources/application.properties
+Set in `application.yml` or as environment variables:
 
-# LLM provider (Anthropic)
-langchain4j.anthropic.api-key=YOUR_ANTHROPIC_API_KEY
-langchain4j.anthropic.model-name=claude-sonnet-4-6
-
-# LLM provider (OpenAI — alternative)
-# langchain4j.open-ai.api-key=YOUR_OPENAI_API_KEY
-# langchain4j.open-ai.model-name=gpt-4o
-
-# RAG
-langchain4j.rag.embedding-store.in-memory=true
-```
+| Variable | Description | Default |
+|---|---|---|
+| `SARVAM_API_KEY` | Sarvam AI API Key | `demo-key` |
+| `AI_MODEL_NAME` | Model name | `sarvam-105b-conversations` |
+| `AI_BASE_URL` | Base URL for OpenAI-compatible API | `https://api.sarvam.ai/v1` |
+| `QDRANT_API_KEY` | Qdrant Cloud API key | `demo-key` |
+| `QDRANT_HOST_NAME` | Qdrant host | `localhost` |
+| `QDRANT_PORT` | Qdrant port | `6334` |
+| `HUGGINGFACE_API_KEY` | Hugging Face API key for embeddings | `demo-key` |
+| `UNSPLASH_API_KEY` | Unsplash API key for photos (optional) | _empty_ |
 
 ---
 

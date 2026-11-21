@@ -19,10 +19,16 @@ public class BudgetAgentTool {
             @P("The travel destination, e.g. Goa, Jaipur, Kerala, Manali") String destination,
             @P("Number of days for the trip") String daysStr,
             @P("Travel style: backpacker, comfort, or luxury") String travelStyle) {
+        if (destination == null || destination.isBlank()) {
+            return "Please provide a valid destination.";
+        }
         int days;
         try {
-            days = Integer.parseInt(daysStr.replaceAll("[^0-9]", ""));
+            days = daysStr != null ? Integer.parseInt(daysStr.replaceAll("[^0-9]", "")) : 3;
         } catch (Exception e) {
+            days = 3;
+        }
+        if (days <= 0) {
             days = 3;
         }
 

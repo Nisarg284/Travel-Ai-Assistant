@@ -26,6 +26,9 @@ public class DestinationImageTool {
     public String fetchImages(
             @P("The travel destination name, e.g. Goa, Jaipur, Kerala, Manali") String destination
     ) {
+        if (destination == null || destination.isBlank()) {
+            return "Please provide a valid destination.";
+        }
         log.info("📸 DestinationImageTool invoked — destination: {}", destination);
 
         List<String> imageUrls = unsplashImageService.searchImages(destination, 3);

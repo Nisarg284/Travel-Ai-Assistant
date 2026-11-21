@@ -49,6 +49,9 @@ public class ItineraryAgentTool {
       "Returns recommended activities, attractions, and food for each part of the day.")
   public String suggestActivities(
       @P("The travel destination, e.g. Goa, Jaipur, Kerala, Manali") String destination) {
+    if (destination == null || destination.isBlank()) {
+      return "Please provide a valid destination.";
+    }
     log.info("📋 ItineraryAgentTool invoked — destination: {}", destination);
 
     String key = destination.toLowerCase().trim();

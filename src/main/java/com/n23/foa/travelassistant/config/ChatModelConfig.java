@@ -16,13 +16,13 @@ import java.util.Map;
 public class ChatModelConfig {
 
 
-    @Value("${SARVAM_API_KEY}")
+    @Value("${sarvam.api-key:${SARVAM_API_KEY:demo-key}}")
     private String sarvamApiKey;
 
-    @Value("${AI_MODEL_NAME}")
+    @Value("${sarvam.model-name:${AI_MODEL_NAME:sarvam-105b-conversations}}")
     private String modelName;
 
-    @Value("${AI_BASE_URL}")
+    @Value("${sarvam.base-url:${AI_BASE_URL:https://api.sarvam.ai/v1}}")
     private String baseUrl;
 
     @Bean

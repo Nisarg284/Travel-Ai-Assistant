@@ -56,6 +56,9 @@ public class MockHotelService {
     }
 
     public List<HotelOption> searchHotels(String destination, int budgetPerNight, String travelStyle) {
+        if (destination == null || destination.isBlank()) {
+            return Collections.emptyList();
+        }
         String key = destination.toLowerCase().trim();
 
         List<HotelOption> allHotels = HOTEL_DATABASE.getOrDefault(key, Collections.emptyList());

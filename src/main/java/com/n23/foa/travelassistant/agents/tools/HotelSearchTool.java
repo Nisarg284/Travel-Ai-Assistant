@@ -33,11 +33,17 @@ public class HotelSearchTool {
             @P("The travel destination name, e.g. Goa, Jaipur, Kerala, Manali") String destination,
             @P("Maximum budget per night in INR per room") String budgetPerNightStr,
             @P("Travel style preference: backpacker, comfort, or luxury") String travelStyle) {
+        if (destination == null || destination.isBlank()) {
+            return "Please provide a valid destination.";
+        }
         int budgetPerNight;
         try {
-            budgetPerNight = Integer.parseInt(budgetPerNightStr.replaceAll("[^0-9]", ""));
+            budgetPerNight = budgetPerNightStr != null ? Integer.parseInt(budgetPerNightStr.replaceAll("[^0-9]", "")) : 5000;
         } catch (Exception e) {
             budgetPerNight = 5000; // sensible default
+        }
+        if (budgetPerNight <= 0) {
+            budgetPerNight = 5000;
         }
 
         log.info("🏨 HotelSearchTool invoked — destination: {}, budget/night: ₹{}, style: {}",

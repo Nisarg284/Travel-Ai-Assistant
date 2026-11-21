@@ -4,6 +4,7 @@ package com.n23.foa.travelassistant.ingestion;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.Metadata;
 import dev.langchain4j.store.embedding.EmbeddingStoreIngestor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Service
 public class IngestorTestService {
 
@@ -25,38 +27,14 @@ public class IngestorTestService {
     }
 
     public void ingest() throws IOException {
-
-//        Path path = Path.of("C:/Users/Nisarg/OneDrive/Desktop/java/Langchain4j/Projects/Travel Assistant/knowledge-base/destinations/goa.md");
-        Path folderPath = Paths.get("C:\\Users\\Nisarg\\OneDrive\\Desktop\\java\\Langchain4j\\Projects\\Travel Assistant\\knowledge-base\\destinations");
-
-//        Files.list(folderPath)
-//                .filter(path -> path.toString().endsWith(".md"))
-//                .forEach(
-//                        path -> {
-//                            try {
-//                                String mdFile = Files.readString(path);
-//                                List<TravelSection> sections = sectionExtractor.extract(mdFile);
-//                                List<Document> documents = sections.stream().map(
-//                                        ts -> {
-//                                            Metadata metadata = new Metadata(Map.of(
-//                                                    "destination", ts.destination(),
-//                                                    "section", ts.section()
-//                                            ));
-//                                            return Document.document(ts.content(), metadata);
-//                                        }
-//                                ).toList();
-//                                ingestor.ingest(documents);
-//                            } catch (IOException e) {
-//                                throw new RuntimeException(e);
-//                            }
-//                        }
-//                );
+        Path folderPath = Paths.get("knowledge-base", "destinations");
+        if (!Files.exists(folderPath)) {
+            log.warn("Knowledge base directory does not exist at: {}", folderPath.toAbsolutePath());
+            return;
+        }
 
         List<Document> allDocuments;
         try(var paths = Files.list(folderPath)) {
-
-
-
             allDocuments = paths
                     .filter(path -> path.toString().endsWith(".md"))
                     .flatMap(path -> {
@@ -67,10 +45,10 @@ public class IngestorTestService {
                                     .stream()
                                     .map(ts -> {
                                         Metadata metadata = new Metadata(Map.of(
-                                                "destination",ts.destination(),
-                                                "section",ts.section()
+                                                "destination", ts.destination() != null ? ts.destination() : "",
+                                                "section", ts.section() != null ? ts.section() : ""
                                         ));
-                                        return Document.document(ts.content(),metadata);
+                                        return Document.document(ts.content(), metadata);
                                     });
                         } catch (IOException e) {
                             throw new RuntimeException(e);
@@ -79,22 +57,5 @@ public class IngestorTestService {
         }
 
         ingestor.ingest(allDocuments);
-
-
-//        String markdownFile = Files.readString(path);
-//
-//
-//        List<Document> documents = sectionList.stream()
-//                .map(
-//                        ts -> {
-//                            Metadata metadata = new Metadata(Map.of(
-//                                    "destination", ts.destination(),
-//                                    "section", ts.section()));
-//
-//                            return Document.document(ts.content(), metadata);
-//                        }
-//                ).toList();
-//
-//        ingestor.ingest(documents);
     }
 }

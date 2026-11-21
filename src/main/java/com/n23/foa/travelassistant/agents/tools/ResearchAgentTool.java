@@ -66,6 +66,9 @@ public class ResearchAgentTool {
                         "best season to visit, key highlights, and nearest airport.")
         public String researchDestination(
                         @P("The travel destination, e.g. Goa, Jaipur, Kerala, Manali") String destination) {
+                if (destination == null || destination.isBlank()) {
+                        return "Please provide a valid destination.";
+                }
                 log.info("🔍 ResearchAgentTool invoked — destination: {}", destination);
 
                 String key = destination.toLowerCase().trim();

@@ -6,13 +6,16 @@ import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.store.embedding.EmbeddingStore;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
+@Slf4j
 @Service
 public class TravelIngestionService {
 
@@ -37,7 +40,7 @@ public class TravelIngestionService {
 
     public void uploadFile() throws IOException {
 
-        Path mdPath = Path.of("C:/Users/Nisarg/OneDrive/Desktop/java/Langchain4j/Projects/Travel Assistant/knowledge-base/destinations/goa.md");
+        Path mdPath = Paths.get("knowledge-base", "destinations", "goa.md");
 
         ingest(mdPath);
     }
@@ -50,7 +53,7 @@ public class TravelIngestionService {
 
         List<TextSegment> list = sections.stream()
                 .map(sectionMapper::map)
-                .peek(System.out::println)
+                .peek(segment -> log.debug("Ingesting segment: {}", segment))
                 .toList();
 
 

@@ -26,46 +26,40 @@ public class DefaultTravelFilterBuilder implements TravelFilterBuilder {
                                 .isEqualTo(d))
         );
 
-        switch (intent){
+        if (intent != null) {
+            switch (intent) {
+                case FOOD -> filters.add(
+                        metadataKey("section")
+                                .isEqualTo("Food To Try")
+                );
 
-            case FOOD -> filters.add(
-                    metadataKey("section")
-                            .isEqualTo("Food To Try")
-            );
+                case BUDGET -> filters.add(
+                        metadataKey("section")
+                                .isEqualTo("Estimated Budget")
+                );
 
+                case ACCOMMODATION -> filters.add(
+                        metadataKey("section")
+                                .isEqualTo("Accommodation")
+                );
 
-            case BUDGET ->
-                    filters.add(
-                            metadataKey("section")
-                                    .isEqualTo("Estimated Budget")
-                    );
+                case BEST_TIME -> filters.add(
+                        metadataKey("section")
+                                .isEqualTo("Best Time To Visit")
+                );
 
-            case ACCOMMODATION ->
-                    filters.add(
-                            metadataKey("section")
-                                    .isEqualTo("Accommodation")
-                    );
+                case TRANSPORT -> filters.add(
+                        metadataKey("section")
+                                .isEqualTo("How To Reach")
+                );
 
-            case BEST_TIME ->
-                    filters.add(
-                            metadataKey("section")
-                                    .isEqualTo("Best Time To Visit")
-                    );
+                case ATTRACTIONS -> filters.add(
+                        metadataKey("section")
+                                .isEqualTo("Top Attractions")
+                );
 
-            case TRANSPORT ->
-                    filters.add(
-                            metadataKey("section")
-                                    .isEqualTo("How To Reach")
-                    );
-
-            case ATTRACTIONS ->
-                    filters.add(
-                            metadataKey("section")
-                                    .isEqualTo("Top Attractions")
-                    );
-
-            case GENERAL -> {
-
+                case GENERAL -> {
+                }
             }
         }
 

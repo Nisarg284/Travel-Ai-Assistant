@@ -4,29 +4,24 @@ spring:
 
 
 sarvam:
-  api-key: ${SARVAM_API_KEY}
-#  sk_6dvl8njz_w8Ut7GSmL50PwCgHWrSoYply
-  model-name: ${AI_MODEL_NAME}
-#  sarvam-105b-conversations
-  base-url: ${AI_BASE_URL}
-#  https://api.sarvam.ai/v1
-
-
+  api-key: ${SARVAM_API_KEY:demo-key}
+  model-name: ${AI_MODEL_NAME:sarvam-105b-conversations}
+  base-url: ${AI_BASE_URL:https://api.sarvam.ai/v1}
 
 qdrant:
-  api-key: ${QDRANT_API_KEY}
-  host-name: ${QDRANT_HOST_NAME}
-  port: ${QDRANT_PORT}
-  collection-name: travel-docs-ingestor
+  api-key: ${QDRANT_API_KEY:demo-key}
+  host-name: ${QDRANT_HOST_NAME:localhost}
+  port: ${QDRANT_PORT:6334}
+  collection-name: ${QDRANT_COLLECTION:travel-docs-ingestor}
 
 huggingface:
-  api-key: ${HUGGINGFACE_API_KEY}
-  embedding-model: sentence-transformers/all-MiniLM-L6-v2
+  api-key: ${HUGGINGFACE_API_KEY:demo-key}
+  embedding-model: ${HUGGINGFACE_EMBEDDING_MODEL:sentence-transformers/all-MiniLM-L6-v2}
 
 unsplash:
   api-key: ${UNSPLASH_API_KEY:}
   secret-key: ${UNSPLASH_SECRET_KEY:}
-  base-url: https://api.unsplash.com
+  base-url: ${UNSPLASH_BASE_URL:https://api.unsplash.com}
 
 
 management:
@@ -38,5 +33,6 @@ management:
   endpoint:
     health:
       show-details: never
+
 
 

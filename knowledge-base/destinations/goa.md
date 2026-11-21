@@ -148,16 +148,6 @@ Popular food areas include Panaji, Mapusa, Calangute, and Candolim.
 
 ## Estimated Budget
 
-
-
-## Planning Metadata
-
-* Minimum Daily Budget: ₹3,000
-
-* Recommended Daily Budget: ₹5,000
-
-
-
 ### Budget Trip
 
 

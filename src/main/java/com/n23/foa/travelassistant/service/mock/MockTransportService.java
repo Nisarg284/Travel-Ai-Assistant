@@ -16,8 +16,8 @@ public class MockTransportService {
 
     private record RouteKey(String origin, String destination) {
         RouteKey {
-            origin = origin.toLowerCase().trim();
-            destination = destination.toLowerCase().trim();
+            origin = origin != null ? origin.toLowerCase().trim() : "";
+            destination = destination != null ? destination.toLowerCase().trim() : "";
         }
     }
 
@@ -76,6 +76,12 @@ public class MockTransportService {
     }
 
     public List<TransportOption> searchTransport(String origin, String destination, String preferredMode) {
+        if (origin == null || origin.isBlank()) {
+            origin = "delhi";
+        }
+        if (destination == null || destination.isBlank()) {
+            return Collections.emptyList();
+        }
         RouteKey key = new RouteKey(origin, destination);
 
         List<TransportOption> allOptions = TRANSPORT_DATABASE.getOrDefault(key, Collections.emptyList());
@@ -94,10 +100,14 @@ public class MockTransportService {
     }
 
     public List<String> getSupportedOrigins(String destination) {
+        if (destination == null || destination.isBlank()) {
+            return Collections.emptyList();
+        }
         String dest = destination.toLowerCase().trim();
         return TRANSPORT_DATABASE.keySet().stream()
                 .filter(key -> key.destination().equals(dest))
                 .map(RouteKey::origin)
+                .filter(s -> !s.isEmpty())
                 .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
                 .collect(Collectors.toList());
     }

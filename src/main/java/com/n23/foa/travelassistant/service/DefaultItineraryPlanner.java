@@ -40,7 +40,13 @@ public class DefaultItineraryPlanner
 
       List<ChatMessage> history = memoryStore.getMessages(sessionId);
 
-      List<ChatMessage> messages = new ArrayList<>(history);
+      // Keep only recent messages (up to last 6) to avoid exceeding token limit
+      List<ChatMessage> messages = new ArrayList<>();
+      if (history.size() > 6) {
+         messages.addAll(history.subList(history.size() - 6, history.size()));
+      } else {
+         messages.addAll(history);
+      }
       messages.add(UserMessage.from(prompt));
 
       AiMessage response = chatModel.chat(messages).aiMessage();
