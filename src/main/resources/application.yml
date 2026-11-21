@@ -18,7 +18,7 @@ qdrant:
   api-key: ${QDRANT_API_KEY:demo-key}
   host-name: ${QDRANT_HOST_NAME:localhost}
   port: ${QDRANT_PORT:6334}
-  collection-name: ${QDRANT_COLLECTION:travel-ai}
+  collection-name: ${QDRANT_COLLECTION:travel-ai-ingestor}
 
 unsplash:
   api-key: ${UNSPLASH_API_KEY:}
