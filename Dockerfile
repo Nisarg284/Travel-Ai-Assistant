@@ -50,8 +50,8 @@ EXPOSE ${PORT}
 USER appuser
 
 # JVM tuning for Render's 512MB constrained memory
-# Heap capped at 180MB to leave headroom for Metaspace (~90MB), ONNX native model runtime (~90MB), and threads
-ENV JAVA_OPTS="-XX:+UseContainerSupport -Xms64m -Xmx180m -XX:MaxMetaspaceSize=100m -XX:CompressedClassSpaceSize=24m -Xss256k -XX:+UseSerialGC"
+# Heap capped at 200MB, Metaspace at 128MB, thread stack at 256k, Serial GC for minimal overhead
+ENV JAVA_OPTS="-Xms64m -Xmx200m -XX:MaxMetaspaceSize=128m -Xss256k -XX:+UseSerialGC"
 
 # Run the application — Spring Boot picks up PORT via server.port
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Dserver.port=$PORT -jar app.jar"]
